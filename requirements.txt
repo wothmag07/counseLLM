@@ -1,0 +1,35 @@
+# Core
+torch>=2.1.0
+transformers>=4.40.0
+trl>=0.8.0
+peft>=0.10.0
+bitsandbytes>=0.43.0
+datasets>=2.19.0
+accelerate>=0.30.0
+
+# Config
+pyyaml>=6.0
+
+# Evaluation
+evaluate
+rouge-score
+bert-score
+
+# Deployment
+gradio>=4.0.0
+
+# Tokenizer
+sentencepiece
+protobuf
+
+# Visualization (notebooks)
+matplotlib
+seaborn
+wordcloud
+
+# Experiment tracking (optional)
+wandb
+
+# LLM-as-judge (install the one you need)
+# anthropic
+openai

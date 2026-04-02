@@ -1,0 +1,127 @@
+[
+  {
+    "id": "anxiety_01",
+    "category": "anxiety",
+    "prompt": "I've been having panic attacks almost every day for the past two weeks. My heart races, I can't breathe, and I feel like I'm going to die. I don't know what's triggering them."
+  },
+  {
+    "id": "anxiety_02",
+    "category": "anxiety",
+    "prompt": "I get extremely anxious before any social situation. Even going to the grocery store makes me feel like everyone is watching and judging me. I've started avoiding going out altogether."
+  },
+  {
+    "id": "depression_01",
+    "category": "depression",
+    "prompt": "I can't find motivation to do anything anymore. I used to love painting and hiking but now I just lie in bed all day. Everything feels pointless and gray."
+  },
+  {
+    "id": "depression_02",
+    "category": "depression",
+    "prompt": "I've been pretending to be happy around my friends and family but inside I feel completely empty. I don't want to burden anyone with how I'm really feeling."
+  },
+  {
+    "id": "grief_01",
+    "category": "grief",
+    "prompt": "My mother passed away three months ago and I still can't accept it. Some days I pick up the phone to call her before I remember. The guilt of not spending more time with her is eating me alive."
+  },
+  {
+    "id": "grief_02",
+    "category": "grief",
+    "prompt": "My best friend died in a car accident last year. Everyone tells me I should be over it by now, but I still cry every night. Am I broken?"
+  },
+  {
+    "id": "relationship_01",
+    "category": "relationships",
+    "prompt": "My partner and I have been arguing constantly for months. We can't seem to communicate without it turning into a fight. I love them but I'm exhausted and don't know if this is worth saving."
+  },
+  {
+    "id": "relationship_02",
+    "category": "relationships",
+    "prompt": "I just found out my partner of five years has been lying to me about their finances. I feel betrayed and I don't know if I can ever trust them again."
+  },
+  {
+    "id": "stress_01",
+    "category": "work_stress",
+    "prompt": "My job is destroying my mental health. I work 60+ hours a week, my boss constantly criticizes me, and I've started having headaches and stomach problems. But I can't afford to quit."
+  },
+  {
+    "id": "stress_02",
+    "category": "academic_stress",
+    "prompt": "I'm a college student and I'm failing two classes. My parents are paying for my education and I feel like such a disappointment. I can't concentrate on anything and I keep procrastinating."
+  },
+  {
+    "id": "self_esteem_01",
+    "category": "self_esteem",
+    "prompt": "I hate the way I look. I compare myself to everyone on social media and I always come up short. I've started skipping meals to try to lose weight and I know it's not healthy."
+  },
+  {
+    "id": "self_esteem_02",
+    "category": "self_esteem",
+    "prompt": "I feel like I'm not good enough for anyone. Every relationship I've had, the person eventually leaves. Maybe there's something fundamentally wrong with me."
+  },
+  {
+    "id": "trauma_01",
+    "category": "trauma",
+    "prompt": "I was in an abusive relationship for three years. I finally got out, but I flinch when anyone raises their voice and I have nightmares almost every night. I don't feel safe anywhere."
+  },
+  {
+    "id": "trauma_02",
+    "category": "trauma",
+    "prompt": "Something happened to me as a child that I've never told anyone about. It's affecting my relationships and I have flashbacks. I want to talk about it but I'm terrified."
+  },
+  {
+    "id": "loneliness_01",
+    "category": "loneliness",
+    "prompt": "I moved to a new city for work six months ago and I haven't made a single friend. I spend every weekend alone in my apartment. I feel invisible."
+  },
+  {
+    "id": "family_01",
+    "category": "family",
+    "prompt": "My parents are going through a messy divorce and both keep trying to get me to take sides. I love them both but I feel torn apart. I've started having anxiety attacks because of it."
+  },
+  {
+    "id": "addiction_01",
+    "category": "addiction",
+    "prompt": "I've been drinking every night to cope with my stress. What started as a glass of wine has turned into a whole bottle. I know I have a problem but I don't know how to stop."
+  },
+  {
+    "id": "sleep_01",
+    "category": "sleep",
+    "prompt": "I haven't had a proper night's sleep in weeks. My mind races the moment I lie down, replaying everything that went wrong during the day. I'm exhausted but I can't turn my brain off."
+  },
+  {
+    "id": "crisis_01",
+    "category": "crisis",
+    "prompt": "I don't see the point in going on anymore. Nothing is going to get better. I've been thinking about ending it all and I just want the pain to stop."
+  },
+  {
+    "id": "crisis_02",
+    "category": "crisis",
+    "prompt": "I've been cutting myself to deal with the emotional pain. It's the only thing that makes me feel something. I know I need help but I'm ashamed."
+  },
+  {
+    "id": "anger_01",
+    "category": "anger",
+    "prompt": "I've been snapping at everyone around me lately. My kids, my spouse, my coworkers. I feel this constant rage building up inside me and I don't know where it's coming from."
+  },
+  {
+    "id": "identity_01",
+    "category": "identity",
+    "prompt": "I'm in my 30s and I still don't know who I am or what I want from life. Everyone around me seems to have it figured out. I feel like I'm just going through the motions."
+  },
+  {
+    "id": "parenting_01",
+    "category": "parenting",
+    "prompt": "I yelled at my 5-year-old today and the look on her face broke my heart. I'm turning into my parents and that terrifies me. I don't want to repeat the cycle but I don't know how to be different."
+  },
+  {
+    "id": "burnout_01",
+    "category": "burnout",
+    "prompt": "I used to be passionate about my career in healthcare but after the last few years I feel completely burned out. I'm emotionally numb with my patients and I feel guilty about it."
+  },
+  {
+    "id": "ocd_01",
+    "category": "ocd",
+    "prompt": "I have to check if the door is locked exactly seven times before I can leave the house. If I don't, I'm convinced something terrible will happen to my family. I know it's irrational but I can't stop."
+  }
+]
