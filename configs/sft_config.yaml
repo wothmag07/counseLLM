@@ -1,0 +1,73 @@
+# counseLLM — SFT Training Configuration
+
+# Base model
+model:
+  name: "meta-llama/Llama-3.1-8B-Instruct"
+  attn_implementation: "flash_attention_2"
+  torch_dtype: "bfloat16"
+
+# QLoRA quantization
+quantization:
+  load_in_4bit: true
+  bnb_4bit_quant_type: "nf4"
+  bnb_4bit_compute_dtype: "bfloat16"
+  bnb_4bit_use_double_quant: true
+
+# LoRA adapter
+lora:
+  r: 64
+  lora_alpha: 128
+  lora_dropout: 0.05
+  target_modules:
+    - q_proj
+    - k_proj
+    - v_proj
+    - o_proj
+    - gate_proj
+    - up_proj
+    - down_proj
+  bias: "none"
+  task_type: "CAUSAL_LM"
+
+# Training
+training:
+  num_train_epochs: 3
+  per_device_train_batch_size: 4
+  per_device_eval_batch_size: 4
+  gradient_accumulation_steps: 4    # effective batch size = 16
+  learning_rate: 2e-4
+  lr_scheduler_type: "cosine"
+  warmup_ratio: 0.05
+  max_seq_length: 2048
+  bf16: true
+  gradient_checkpointing: true
+  seed: 42
+
+# Logging & saving
+logging:
+  logging_steps: 25
+  eval_strategy: "steps"
+  eval_steps: 200
+  save_strategy: "steps"
+  save_steps: 200
+  save_total_limit: 3
+  load_best_model_at_end: true
+  metric_for_best_model: "eval_loss"
+  greater_is_better: false
+  report_to: "wandb"
+
+# Data
+data:
+  train_file: "data/sft_train.jsonl"
+  val_file: "data/sft_val.jsonl"
+  output_dir: "outputs/sft"
+
+# System prompt used during data preparation
+system_prompt: >
+  You are a mental health counselor providing supportive, empathetic guidance.
+  Respond by first acknowledging the person's feelings, then explore their
+  situation with open-ended questions. Use techniques like reflective listening,
+  validation, and gentle reframing. Keep responses warm, conversational, and
+  non-judgmental. For crisis situations involving self-harm or suicide,
+  prioritize safety by encouraging the person to contact a crisis helpline
+  or emergency services.

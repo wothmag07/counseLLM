@@ -1,0 +1,83 @@
+# counseLLM — DPO Training Configuration
+
+# Base model
+model:
+  name: "meta-llama/Llama-3.1-8B-Instruct"
+  attn_implementation: "flash_attention_2"
+  torch_dtype: "bfloat16"
+
+# QLoRA quantization
+quantization:
+  load_in_4bit: true
+  bnb_4bit_quant_type: "nf4"
+  bnb_4bit_compute_dtype: "bfloat16"
+  bnb_4bit_use_double_quant: true
+
+# LoRA adapter (smaller rank than SFT — DPO is a refinement step)
+lora:
+  r: 32
+  lora_alpha: 64
+  lora_dropout: 0.05
+  target_modules:
+    - q_proj
+    - k_proj
+    - v_proj
+    - o_proj
+    - gate_proj
+    - up_proj
+    - down_proj
+  bias: "none"
+  task_type: "CAUSAL_LM"
+
+# DPO specific
+dpo:
+  beta: 0.1                         # KL penalty coefficient — lower = more aggressive alignment
+
+# Training
+training:
+  num_train_epochs: 2
+  per_device_train_batch_size: 2
+  per_device_eval_batch_size: 2
+  gradient_accumulation_steps: 4    # effective batch size = 8
+  learning_rate: 5e-5
+  lr_scheduler_type: "cosine"
+  warmup_ratio: 0.1
+  max_length: 2048
+  max_prompt_length: 512
+  bf16: true
+  gradient_checkpointing: true
+  seed: 42
+
+# Logging & saving
+logging:
+  logging_steps: 10
+  eval_strategy: "steps"
+  eval_steps: 100
+  save_strategy: "steps"
+  save_steps: 100
+  save_total_limit: 3
+  load_best_model_at_end: true
+  metric_for_best_model: "eval_loss"
+  greater_is_better: false
+  report_to: "wandb"
+
+# Data
+data:
+  train_file: "data/dpo_train.jsonl"
+  val_file: "data/dpo_val.jsonl"
+  sft_adapter_dir: "outputs/sft/final"
+  output_dir: "outputs/dpo"
+
+# Preference data sampling
+sampling:
+  sample_size: 2000
+  max_pairs_per_question: 3
+  min_rating_gap: 0                 # set > 0 to filter for stronger preference signal
+  rating_dimensions:
+    - empathy
+    - relevance
+    - clarity
+    - safety
+    - exploration
+    - autonomy
+    - staging
