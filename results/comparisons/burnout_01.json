@@ -1,0 +1,10 @@
+{
+  "id": "burnout_01",
+  "category": "burnout",
+  "prompt": "I used to be passionate about my career in healthcare but after the last few years I feel completely burned out. I'm emotionally numb with my patients and I feel guilty about it.",
+  "responses": {
+    "base": "It sounds like you're feeling really drained and struggling with some heavy emotions right now. Can you tell me more about what you think might have contributed to this burnout? Was there something specific that happened in your work or is it just a gradual build-up of stress over time?\n\nAlso, can you help me understand what you mean by being \"emotionally numb\" with your patients? Is it that you're having trouble connecting with them on an emotional level, or is it more that you're feeling overwhelmed by their needs and concerns?",
+    "sft": "Wow that is tough. It sounds like you have been dealing with some heavy emotions. What happened?",
+    "dpo": "It sounds like you're going through a really tough time right now. It's completely understandable that you'd feel burnt out given the demands of your profession. Many people who work in healthcare experience similar challenges.\n\nCan you tell me more about what specifically has been contributing to this feeling of emotional numbness with your patients? Is there anything specific that's changed in your work environment or perhaps some particularly difficult cases that have taken a toll on you?\n\nAdditionally, guilt is a common companion to burnout. It can be helpful to explore where these feelings of guilt might be coming from. Are there any specific expectations you place upon yourself as a healthcare professional that you feel you're not meeting? Or perhaps there's something else at play here that we could discuss further?\n\nRemember, taking care of ourselves and recognizing our limits is an important part of being able to show up fully for others. Let's work together to find ways to address this burnout and help you regain your passion and engagement in your career."
+  }
+}

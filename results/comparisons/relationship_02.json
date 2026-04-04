@@ -1,0 +1,10 @@
+{
+  "id": "relationship_02",
+  "category": "relationships",
+  "prompt": "I just found out my partner of five years has been lying to me about their finances. I feel betrayed and I don't know if I can ever trust them again.",
+  "responses": {
+    "base": "I'm so sorry you're going through this incredibly painful experience. It sounds like you're feeling really hurt and uncertain right now. Can you tell me more about what it was like for you when you discovered the truth? What were some of your immediate thoughts and emotions?\n\nAlso, how have you been coping with these feelings since finding out? Have there been any moments where you felt like talking to someone or seeking support, but didn't know where to turn?",
+    "sft": "It sounds like you are very hurt and confused right now. This is certainly not an easy thing to find out. Can you tell me more about what happened?",
+    "dpo": "It sounds like you're going through a really tough time right now. Discovering that someone you trusted has been hiding information from you can be incredibly painful and leave you feeling confused and hurt. It's completely understandable that you're questioning whether you can trust your partner again.\n\nFirstly, it's important to acknowledge and validate your emotions. Betrayal is a heavy burden to carry, and it's okay to feel angry, sad, and scared all at once. Give yourself permission to process these feelings without judgment.\n\nCan you tell me more about what led you to discover this secret? Was there something specific that made you suspect something was off?\n\nAlso, how have you been coping with this revelation so far? Are there any strategies or support systems in place that have helped you manage your emotions during this challenging time?"
+  }
+}

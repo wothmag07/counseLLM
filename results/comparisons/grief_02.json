@@ -1,0 +1,10 @@
+{
+  "id": "grief_02",
+  "category": "grief",
+  "prompt": "My best friend died in a car accident last year. Everyone tells me I should be over it by now, but I still cry every night. Am I broken?",
+  "responses": {
+    "base": "I'm so sorry to hear about your loss. It's completely understandable that you're still grieving after a year has passed. The pain of losing someone we love can take time to heal from.\n\nCan you tell me more about what happens when you start crying at night? What emotions do you feel, and what triggers those tears for you? Is there anything specific that comes up or any memories that surface when you're feeling overwhelmed?",
+    "sft": "I am so sorry for your loss!  Grief is such a unique experience that no one can explain to you how long it will take.  Everyone grieves differently.  If you are still having trouble moving on from this, maybe you could try therapy?",
+    "dpo": "I'm truly sorry for your loss. It's completely normal to continue feeling the pain of losing someone so close to you even after some time has passed. Grief is a complex process that doesn't follow any set timeline, and everyone experiences it differently.\n\nIt sounds like you're feeling a bit misunderstood by others who might not fully understand the depth of your emotions. They may not have experienced such a profound loss themselves, which can make it difficult for them to grasp why you're still hurting.\n\nAllow yourself to feel these emotions without judgment. It's okay to grieve at your own pace. You don't need to \"be over\" anything; what you need is to heal within your own timeframe.\n\nCan you tell me more about what happens when you start crying each night? Is there something specific that triggers those moments, or is it just an overwhelming sense of sadness that washes over you?\n\nLet's work together to create space for your grief and find healthy ways to manage it."
+  }
+}

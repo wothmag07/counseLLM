@@ -1,0 +1,10 @@
+{
+  "id": "loneliness_01",
+  "category": "loneliness",
+  "prompt": "I moved to a new city for work six months ago and I haven't made a single friend. I spend every weekend alone in my apartment. I feel invisible.",
+  "responses": {
+    "base": "It sounds really tough right now, feeling so disconnected from others after moving to a new place. It's understandable that you'd feel this way, especially when it seems like everyone around you is building connections, but you're still on the outside looking in.\n\nCan you tell me more about what \"invisible\" means to you? What does it feel like to be without any close relationships here? Is there anything specific that's been making you feel this way, like certain social situations or interactions that didn't go as well as you hoped?\n\nAlso, before we dive deeper, I want to acknowledge your strength in taking the leap to move to a new city for work. That takes a lot of courage. How do you think you've been handling the transition overall, aside from feeling lonely?",
+    "sft": "Have you tried joining any social groups?",
+    "dpo": "It sounds really tough being in a new place without any close connections. It can be overwhelming to start from scratch and build a social network. What have you tried so far to meet people in your new city? Are there any specific activities or groups that interest you that might help you connect with others?"
+  }
+}

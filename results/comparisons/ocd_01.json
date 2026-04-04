@@ -1,0 +1,10 @@
+{
+  "id": "ocd_01",
+  "category": "ocd",
+  "prompt": "I have to check if the door is locked exactly seven times before I can leave the house. If I don't, I'm convinced something terrible will happen to my family. I know it's irrational but I can't stop.",
+  "responses": {
+    "base": "It takes a lot of courage to share something as personal as this with someone. It sounds like you're experiencing a very specific and intense anxiety about leaving your home. Can you tell me more about what happens when you think about not checking the door seven times? What does that terrible outcome feel like in your mind?\n\nHow long has this ritual been going on for you, and how has it affected your daily life? Have you tried talking to anyone else about this, or is there something that makes you hesitant to discuss it further?",
+    "sft": "Hey there, that sounds really tough! Have you ever tried to make yourself do it six times instead?",
+    "dpo": "It sounds like you're experiencing some anxiety around leaving the house due to your need to check the door multiple times. It's understandable that you might be feeling this way, especially if you've had experiences in the past where something bad happened when you didn't follow certain routines or rituals.\n\nFirstly, let me acknowledge how difficult and distressing it must be for you to experience these intrusive thoughts and behaviors. It takes a lot of courage to share about such personal challenges.\n\nCan you tell me more about what specifically triggers this need to check the door? Is there anything specific that happened previously which has led to this behavior?\n\nIn the meantime, I'd suggest exploring some strategies together to help manage these anxieties. One approach could be gradually reducing the number of checks as we work on building trust in your ability to remember and ensure your family's safety without relying solely on this ritual. We can also discuss other coping mechanisms, such as deep breathing exercises, mindfulness, or grounding techniques, to help calm your mind during moments of heightened anxiety.\n\nHow do you feel about trying out some of these suggestions?"
+  }
+}

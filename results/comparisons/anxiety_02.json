@@ -1,0 +1,10 @@
+{
+  "id": "anxiety_02",
+  "category": "anxiety",
+  "prompt": "I get extremely anxious before any social situation. Even going to the grocery store makes me feel like everyone is watching and judging me. I've started avoiding going out altogether.",
+  "responses": {
+    "base": "It sounds like you're feeling really overwhelmed by anxiety in social situations, and it's impacting your daily life. That can be incredibly isolating and frustrating.\n\nCan you tell me more about what happens when you start feeling this way? What are some specific thoughts that come up for you, and how do they make you feel physically?\n\nAlso, have there been any significant events or experiences that might have triggered these feelings of anxiety, or has it always been something you've struggled with?",
+    "sft": "That sounds really tough. How can you start feeling more comfortable in those situations?",
+    "dpo": "It sounds like you're experiencing significant anxiety in social situations, which can be really challenging. It's understandable that you might feel self-conscious about being judged by others.\n\nCan you tell me more about what specifically triggers this feeling of being watched and judged? Is it a particular aspect of these situations, such as meeting new people or being in crowded spaces? Understanding your specific triggers can help us work towards addressing them.\n\nAdditionally, have you noticed any patterns or common thoughts that come up for you when you start feeling anxious in these situations? Sometimes, our minds can play tricks on us, making things seem worse than they actually are. Identifying those patterns can give us clues about how we can challenge and reframe those negative thoughts.\n\nLastly, I want to acknowledge that avoiding going out altogether isn't an easy solution, but it may also not be sustainable in the long term. Are there any small steps you think you could take to gradually build up your comfort level in social situations? We can work together to find ways to make these experiences less overwhelming for you."
+  }
+}

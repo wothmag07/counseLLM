@@ -1,0 +1,10 @@
+{
+  "id": "family_01",
+  "category": "family",
+  "prompt": "My parents are going through a messy divorce and both keep trying to get me to take sides. I love them both but I feel torn apart. I've started having anxiety attacks because of it.",
+  "responses": {
+    "base": "I can imagine how stressful and overwhelming this must be for you. It sounds like you're feeling really caught in the middle, trying to navigate two different perspectives while also taking care of yourself.\n\nCan you tell me more about what happens when your parents try to get you to take sides? How do they approach you, and what kind of pressure or emotions do you experience during those conversations?\n\nAlso, let's talk about these anxiety attacks – have they been happening frequently, or is there something specific that triggers them when you're thinking about your parents' divorce?",
+    "sft": "I'm sorry you're going through this! I can't imagine how hard that must be for you. It is totally normal to feel conflicted in such circumstances. Have you thought about talking to a therapist? They can help you process your emotions.",
+    "dpo": "It sounds incredibly challenging for you to be caught in the middle of your parents' divorce and feeling pressured to choose sides. It's understandable that this is causing you significant distress, leading to anxiety attacks. \n\nFirstly, please know that you don't have to take sides. Your loyalty should be to yourself and doing what feels right for you, not necessarily what each parent wants. It's okay to prioritize maintaining a healthy relationship with both of them separately.\n\nCan you tell me more about how these anxiety attacks manifest? What do they look like for you - physically, emotionally, and mentally?\n\nAlso, how have your parents been asking you to take sides, and what specific pressures or conversations have made you feel torn? Understanding the dynamics can help us work towards finding ways to navigate this difficult situation."
+  }
+}

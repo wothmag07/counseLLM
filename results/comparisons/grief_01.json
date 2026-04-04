@@ -1,0 +1,10 @@
+{
+  "id": "grief_01",
+  "category": "grief",
+  "prompt": "My mother passed away three months ago and I still can't accept it. Some days I pick up the phone to call her before I remember. The guilt of not spending more time with her is eating me alive.",
+  "responses": {
+    "base": "I'm so sorry for your loss. It's completely understandable that you're struggling to come to terms with this new reality. It takes a lot of courage to admit that you're feeling guilty about not having spent more time with your mom.\n\nCan you tell me more about what comes up for you when you think about those missed opportunities? What does it feel like in your body when you have these thoughts about not spending enough time with your mom?",
+    "sft": "I'm so sorry for your loss. It sounds like you have a lot of grief to process. How do you think you will move forward?",
+    "dpo": "I'm so sorry for your loss. Losing someone we love can be incredibly painful and it's completely normal to feel overwhelmed with grief. It sounds like you're experiencing a mix of emotions, including guilt, sadness, and perhaps even regret.\n\nIt's understandable that you're struggling to come to terms with your mom being gone. Grief has its own timeline, and everyone experiences it differently. It may take some time for the pain to lessen and acceptance to set in.\n\nOne thing to consider is how you can honor your mom's memory while also taking care of yourself during this difficult time. This could involve doing something that reminds you of her, whether it's cooking one of her favorite recipes, looking at photos together as a family, or even just talking about her with others who loved her too.\n\nIn terms of your guilt, it might be helpful to practice self-compassion. Remind yourself that there were circumstances beyond your control, and you did the best you could given what you knew at the time. Instead of dwelling on what you didn't do, try focusing on the memories and positive aspects of your relationship with your mom. \n\nHow have you been coping since she passed? Is there anything specific that feels challenging for you right now?"
+  }
+}

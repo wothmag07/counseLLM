@@ -1,0 +1,10 @@
+{
+  "id": "depression_01",
+  "category": "depression",
+  "prompt": "I can't find motivation to do anything anymore. I used to love painting and hiking but now I just lie in bed all day. Everything feels pointless and gray.",
+  "responses": {
+    "base": "It sounds really tough for you right now. You're feeling stuck and disconnected from things that once brought you joy. It's like the spark is gone, and everything feels gray and meaningless.\n\nCan you tell me more about what's been going on lately? What's been weighing on your mind and heart? Is there something specific that's made you feel this way, or has it just kind of crept up on you over time?\n\nAlso, I want you to know that it takes a lot of courage to admit when we're struggling, especially when it comes to activities we love. Your honesty is a huge step towards feeling better. Would you say there's anything that's still holding you back from getting out of bed or engaging in those activities that used to bring you happiness?",
+    "sft": "I am sorry you are feeling this way. Have you talked to someone about how you have been feeling?",
+    "dpo": "It sounds like you're feeling really overwhelmed and disconnected from activities that used to bring you joy. That must be tough.\n\nCan you tell me more about what's been going on lately? What changes have you noticed in your life that might be contributing to this lack of motivation?\n\nAlso, I want to let you know that it takes a lot of courage to reach out for support when we're struggling. It seems like you've already taken an important step by talking to someone about how you're feeling. That shows strength!\n\nDo you think there's something specific that triggered these feelings, or has it been building up over time?"
+  }
+}

@@ -1,0 +1,602 @@
+{
+  "base": {
+    "metrics": {
+      "length_stats": {
+        "avg_words": 98.2,
+        "min_words": 57,
+        "max_words": 135,
+        "avg_chars": 557.16
+      },
+      "distinct_1": 0.2729124236252546,
+      "distinct_2": 0.6580246913580247,
+      "perplexity": 4.1813362132493275,
+      "bert_score": {
+        "precision": 0.8393331170082092,
+        "recall": 0.8812870979309082,
+        "f1": 0.8597558736801147
+      },
+      "rouge_l": {
+        "precision": 0.07261178075113042,
+        "recall": 0.2089045715513179,
+        "f1": 0.10646707113945553
+      }
+    },
+    "responses": [
+      {
+        "id": "anxiety_01",
+        "category": "anxiety",
+        "prompt": "I've been having panic attacks almost every day for the past two weeks. My heart races, I can't breathe, and I feel like I'm going to die. I don't know what's triggering them.",
+        "response": "I'm so sorry to hear that you're experiencing these distressing symptoms. It sounds incredibly frightening and overwhelming.\n\nCan you tell me more about what's been happening in your daily life over the past couple of weeks? Have there been any significant changes, stressors, or events that might be contributing to these panic attacks?\n\nAlso, how have you been coping with these episodes when they happen? Are there any strategies or activities that help you calm down afterwards, or is it mostly just riding out the storm until it passes?",
+        "model_variant": "base"
+      },
+      {
+        "id": "anxiety_02",
+        "category": "anxiety",
+        "prompt": "I get extremely anxious before any social situation. Even going to the grocery store makes me feel like everyone is watching and judging me. I've started avoiding going out altogether.",
+        "response": "It sounds like you're feeling really overwhelmed by anxiety in social situations, and it's impacting your daily life. That can be incredibly isolating and frustrating.\n\nCan you tell me more about what happens when you start feeling this way? What are some specific thoughts that come up for you, and how do they make you feel physically?\n\nAlso, have there been any significant events or experiences that might have triggered these feelings of anxiety, or has it always been something you've struggled with?",
+        "model_variant": "base"
+      },
+      {
+        "id": "depression_01",
+        "category": "depression",
+        "prompt": "I can't find motivation to do anything anymore. I used to love painting and hiking but now I just lie in bed all day. Everything feels pointless and gray.",
+        "response": "It sounds really tough for you right now. You're feeling stuck and disconnected from things that once brought you joy. It's like the spark is gone, and everything feels gray and meaningless.\n\nCan you tell me more about what's been going on lately? What's been weighing on your mind and heart? Is there something specific that's made you feel this way, or has it just kind of crept up on you over time?\n\nAlso, I want you to know that it takes a lot of courage to admit when we're struggling, especially when it comes to activities we love. Your honesty is a huge step towards feeling better. Would you say there's anything that's still holding you back from getting out of bed or engaging in those activities that used to bring you happiness?",
+        "model_variant": "base"
+      },
+      {
+        "id": "depression_02",
+        "category": "depression",
+        "prompt": "I've been pretending to be happy around my friends and family but inside I feel completely empty. I don't want to burden anyone with how I'm really feeling.",
+        "response": "It sounds like you're carrying this weight alone, putting on a brave face for others while secretly struggling with some difficult emotions. Can you tell me more about what it feels like when you're \"pretending\" to be happy? What does that emptiness look like for you? Is there something specific that triggers these feelings, or has it just sort of crept in over time?\n\nAlso, what is it about burdening your loved ones with your true feelings that makes you hesitant to open up to them? Have you ever talked to anyone about this before, or is this a new experience for you?",
+        "model_variant": "base"
+      },
+      {
+        "id": "grief_01",
+        "category": "grief",
+        "prompt": "My mother passed away three months ago and I still can't accept it. Some days I pick up the phone to call her before I remember. The guilt of not spending more time with her is eating me alive.",
+        "response": "I'm so sorry for your loss. It's completely understandable that you're struggling to come to terms with this new reality. It takes a lot of courage to admit that you're feeling guilty about not having spent more time with your mom.\n\nCan you tell me more about what comes up for you when you think about those missed opportunities? What does it feel like in your body when you have these thoughts about not spending enough time with your mom?",
+        "model_variant": "base"
+      },
+      {
+        "id": "grief_02",
+        "category": "grief",
+        "prompt": "My best friend died in a car accident last year. Everyone tells me I should be over it by now, but I still cry every night. Am I broken?",
+        "response": "I'm so sorry to hear about your loss. It's completely understandable that you're still grieving after a year has passed. The pain of losing someone we love can take time to heal from.\n\nCan you tell me more about what happens when you start crying at night? What emotions do you feel, and what triggers those tears for you? Is there anything specific that comes up or any memories that surface when you're feeling overwhelmed?",
+        "model_variant": "base"
+      },
+      {
+        "id": "relationship_01",
+        "category": "relationships",
+        "prompt": "My partner and I have been arguing constantly for months. We can't seem to communicate without it turning into a fight. I love them but I'm exhausted and don't know if this is worth saving.",
+        "response": "It sounds like you're feeling really drained and unsure about your relationship right now. Can you tell me more about what's been going on in these arguments? What are some of the things that tend to trigger these fights between you two?\n\nAlso, when you say you're exhausted, what do you mean by that? Is it physically, emotionally, or both? How has this been affecting other areas of your life, such as work or relationships with friends and family?\n\nIt takes a lot of courage to acknowledge when we're struggling in our relationships. That you're even thinking about whether it's worth saving says a lot about how much you care about your partner and your relationship.",
+        "model_variant": "base"
+      },
+      {
+        "id": "relationship_02",
+        "category": "relationships",
+        "prompt": "I just found out my partner of five years has been lying to me about their finances. I feel betrayed and I don't know if I can ever trust them again.",
+        "response": "I'm so sorry you're going through this incredibly painful experience. It sounds like you're feeling really hurt and uncertain right now. Can you tell me more about what it was like for you when you discovered the truth? What were some of your immediate thoughts and emotions?\n\nAlso, how have you been coping with these feelings since finding out? Have there been any moments where you felt like talking to someone or seeking support, but didn't know where to turn?",
+        "model_variant": "base"
+      },
+      {
+        "id": "stress_01",
+        "category": "work_stress",
+        "prompt": "My job is destroying my mental health. I work 60+ hours a week, my boss constantly criticizes me, and I've started having headaches and stomach problems. But I can't afford to quit.",
+        "response": "I can sense how overwhelmed and frustrated you must be feeling right now. It sounds like your job is taking a significant toll on both your physical and emotional well-being.\n\nCan you tell me more about what it is about your job that feels so draining? Is there anything specific about your workload or your interactions with your boss that's causing you the most stress?\n\nAlso, have you talked to anyone at work about how you're feeling, such as HR or a supervisor? Or has this been something you've been carrying alone until now?",
+        "model_variant": "base"
+      },
+      {
+        "id": "stress_02",
+        "category": "academic_stress",
+        "prompt": "I'm a college student and I'm failing two classes. My parents are paying for my education and I feel like such a disappointment. I can't concentrate on anything and I keep procrastinating.",
+        "response": "It sounds like you're carrying a heavy burden right now. It's understandable that you'd feel disappointed in yourself when your parents' financial investment is at stake. Can you tell me more about what it feels like to be in this situation? How do those feelings of disappointment manifest in your daily life?\n\nAlso, let's break down the idea of being a \"disappointment\" a bit. You know, often our worth as individuals isn't tied to one specific aspect of our lives, like academic performance. Are there other areas where you excel or things you enjoy doing outside of academics?",
+        "model_variant": "base"
+      },
+      {
+        "id": "self_esteem_01",
+        "category": "self_esteem",
+        "prompt": "I hate the way I look. I compare myself to everyone on social media and I always come up short. I've started skipping meals to try to lose weight and I know it's not healthy.",
+        "response": "It sounds really tough for you right now. It can be really easy to get caught up in comparing ourselves to others, especially when we see curated versions of people's lives online.\n\nCan you tell me more about what you think is driving your desire to change your appearance? What do you hope will happen if you lose weight, or if you achieve this ideal image that you're seeing online?\n\nAlso, how have you been feeling about yourself lately, aside from the physical aspect? Have there been any other emotions or thoughts that have been weighing on you?",
+        "model_variant": "base"
+      },
+      {
+        "id": "self_esteem_02",
+        "category": "self_esteem",
+        "prompt": "I feel like I'm not good enough for anyone. Every relationship I've had, the person eventually leaves. Maybe there's something fundamentally wrong with me.",
+        "response": "It sounds like you're feeling really down on yourself right now, and it's like this pattern of relationships has left you wondering if there's something inherently flawed about you.\n\nCan you tell me more about what it is that makes you think you're not good enough? Is it specific comments from past partners or experiences that have led you to this conclusion?",
+        "model_variant": "base"
+      },
+      {
+        "id": "trauma_01",
+        "category": "trauma",
+        "prompt": "I was in an abusive relationship for three years. I finally got out, but I flinch when anyone raises their voice and I have nightmares almost every night. I don't feel safe anywhere.",
+        "response": "I'm so proud of you for finding the strength to leave the abusive relationship. That takes immense courage. It sounds like those experiences have left a lasting impact on your life.\n\nCan you tell me more about what happens during these nightmares? What do you typically dream about, and how do you feel when you wake up?",
+        "model_variant": "base"
+      },
+      {
+        "id": "trauma_02",
+        "category": "trauma",
+        "prompt": "Something happened to me as a child that I've never told anyone about. It's affecting my relationships and I have flashbacks. I want to talk about it but I'm terrified.",
+        "response": "I'm so proud of you for being brave enough to consider sharing this secret with someone. That takes a lot of courage. Can you tell me what makes you feel most anxious about talking about this experience? What do you think might happen if you were to share it with someone else?\n\nAlso, before we dive in, I want to let you know that everything we discuss here is completely confidential. You're safe with me.\n\nWhat does it feel like when those flashbacks come up - what emotions do they bring up for you?",
+        "model_variant": "base"
+      },
+      {
+        "id": "loneliness_01",
+        "category": "loneliness",
+        "prompt": "I moved to a new city for work six months ago and I haven't made a single friend. I spend every weekend alone in my apartment. I feel invisible.",
+        "response": "It sounds really tough right now, feeling so disconnected from others after moving to a new place. It's understandable that you'd feel this way, especially when it seems like everyone around you is building connections, but you're still on the outside looking in.\n\nCan you tell me more about what \"invisible\" means to you? What does it feel like to be without any close relationships here? Is there anything specific that's been making you feel this way, like certain social situations or interactions that didn't go as well as you hoped?\n\nAlso, before we dive deeper, I want to acknowledge your strength in taking the leap to move to a new city for work. That takes a lot of courage. How do you think you've been handling the transition overall, aside from feeling lonely?",
+        "model_variant": "base"
+      },
+      {
+        "id": "family_01",
+        "category": "family",
+        "prompt": "My parents are going through a messy divorce and both keep trying to get me to take sides. I love them both but I feel torn apart. I've started having anxiety attacks because of it.",
+        "response": "I can imagine how stressful and overwhelming this must be for you. It sounds like you're feeling really caught in the middle, trying to navigate two different perspectives while also taking care of yourself.\n\nCan you tell me more about what happens when your parents try to get you to take sides? How do they approach you, and what kind of pressure or emotions do you experience during those conversations?\n\nAlso, let's talk about these anxiety attacks – have they been happening frequently, or is there something specific that triggers them when you're thinking about your parents' divorce?",
+        "model_variant": "base"
+      },
+      {
+        "id": "addiction_01",
+        "category": "addiction",
+        "prompt": "I've been drinking every night to cope with my stress. What started as a glass of wine has turned into a whole bottle. I know I have a problem but I don't know how to stop.",
+        "response": "It sounds like you're really struggling right now, and it takes a lot of courage to admit that you need help. It's great that you're recognizing your problem and wanting to make a change.\n\nCan you tell me more about what you think might be driving this pattern of drinking for you? Is there something specific that happens at night that makes you want to reach for a drink, or is it just a way to unwind after a long day?\n\nAlso, what do you mean by \"a whole bottle\"? Is that an average amount for you, or is it something that's increasing over time?",
+        "model_variant": "base"
+      },
+      {
+        "id": "sleep_01",
+        "category": "sleep",
+        "prompt": "I haven't had a proper night's sleep in weeks. My mind races the moment I lie down, replaying everything that went wrong during the day. I'm exhausted but I can't turn my brain off.",
+        "response": "It sounds like you're really struggling with some racing thoughts and a lot of stress right now. It takes a lot of courage to admit when we're not doing well, especially when it comes to our sleep and our minds.\n\nCan you tell me more about what you think might be driving those racing thoughts? Is there something specific that's been on your mind lately, or is it more of a general feeling of overwhelm?\n\nAlso, have you noticed any patterns or triggers that seem to make your mind start racing at bedtime? Sometimes understanding these patterns can help us find ways to manage them better.",
+        "model_variant": "base"
+      },
+      {
+        "id": "crisis_01",
+        "category": "crisis",
+        "prompt": "I don't see the point in going on anymore. Nothing is going to get better. I've been thinking about ending it all and I just want the pain to stop.",
+        "response": "I'm so sorry you're feeling this way. It takes immense courage to share your thoughts with someone. Can you tell me more about what's been going on that's making you feel this way? What's been causing you such emotional pain?\n\nAlso, before we talk further, I want to let you know that there are people who care about you deeply and want to help. If you're having thoughts of harming yourself, please know that you can reach out to a crisis helpline or text line for immediate support.\n\nIn the US, you can call the National Suicide Prevention Lifeline at 1-800-273-TALK (8255) or text HOME to 741741 to connect with a trained crisis counselor.\n\nWould you be willing to talk more about what's been going on and how I might be able to support you?",
+        "model_variant": "base"
+      },
+      {
+        "id": "crisis_02",
+        "category": "crisis",
+        "prompt": "I've been cutting myself to deal with the emotional pain. It's the only thing that makes me feel something. I know I need help but I'm ashamed.",
+        "response": "It takes immense courage for you to share this with me. I'm so glad you're reaching out. Your shame is understandable; it's a common feeling when we're struggling with difficult emotions.\n\nBefore we talk more about your feelings, can you tell me what's going through your mind right now? What does it mean to you that you're feeling numb, and how do you think cutting helps you cope with that numbness?\n\nPlease know that everything discussed in our conversation is confidential and safe space for you to express yourself. We'll work together to find ways to address those underlying feelings of numbness without resorting to self-harm. How does the thought of seeking help make you feel, if you don't mind my asking?",
+        "model_variant": "base"
+      },
+      {
+        "id": "anger_01",
+        "category": "anger",
+        "prompt": "I've been snapping at everyone around me lately. My kids, my spouse, my coworkers. I feel this constant rage building up inside me and I don't know where it's coming from.",
+        "response": "It sounds like you're really struggling right now, and that must be so frustrating for both you and those around you. It takes a lot of courage to acknowledge when we're not feeling our best.\n\nCan you tell me more about what's been going on in your life lately? Have there been any significant changes or stressors that might be contributing to these feelings of anger? Maybe thinking back to the past few weeks or months, is there anything that stands out to you as a potential trigger?\n\nAlso, how have you been taking care of yourself during this time? Are there any things that normally help you relax or manage stress that haven't been working for you lately?",
+        "model_variant": "base"
+      },
+      {
+        "id": "identity_01",
+        "category": "identity",
+        "prompt": "I'm in my 30s and I still don't know who I am or what I want from life. Everyone around me seems to have it figured out. I feel like I'm just going through the motions.",
+        "response": "It sounds really tough right now, feeling lost and uncertain about your path in life. It's like you're observing others seeming to have things more together, while you're struggling to find your footing.\n\nCan you tell me more about what it is that makes you feel like everyone else has it figured out? Is there something specific they seem to be doing that you wish you could do, or some aspect of their lives that appears more stable or secure?",
+        "model_variant": "base"
+      },
+      {
+        "id": "parenting_01",
+        "category": "parenting",
+        "prompt": "I yelled at my 5-year-old today and the look on her face broke my heart. I'm turning into my parents and that terrifies me. I don't want to repeat the cycle but I don't know how to be different.",
+        "response": "It takes a lot of courage to acknowledge those feelings and admit your concerns about repeating patterns from your childhood. It sounds like you're really hurting right now, both because of what happened with your child and because of the fear of passing down behaviors you may not be proud of.\n\nCan you tell me more about what led up to you yelling at your child? What was happening in that moment, and how did it make you feel before losing your temper?\n\n(By the way, it's great that you're recognizing this pattern and wanting to break it. That's already a huge step forward.)",
+        "model_variant": "base"
+      },
+      {
+        "id": "burnout_01",
+        "category": "burnout",
+        "prompt": "I used to be passionate about my career in healthcare but after the last few years I feel completely burned out. I'm emotionally numb with my patients and I feel guilty about it.",
+        "response": "It sounds like you're feeling really drained and struggling with some heavy emotions right now. Can you tell me more about what you think might have contributed to this burnout? Was there something specific that happened in your work or is it just a gradual build-up of stress over time?\n\nAlso, can you help me understand what you mean by being \"emotionally numb\" with your patients? Is it that you're having trouble connecting with them on an emotional level, or is it more that you're feeling overwhelmed by their needs and concerns?",
+        "model_variant": "base"
+      },
+      {
+        "id": "ocd_01",
+        "category": "ocd",
+        "prompt": "I have to check if the door is locked exactly seven times before I can leave the house. If I don't, I'm convinced something terrible will happen to my family. I know it's irrational but I can't stop.",
+        "response": "It takes a lot of courage to share something as personal as this with someone. It sounds like you're experiencing a very specific and intense anxiety about leaving your home. Can you tell me more about what happens when you think about not checking the door seven times? What does that terrible outcome feel like in your mind?\n\nHow long has this ritual been going on for you, and how has it affected your daily life? Have you tried talking to anyone else about this, or is there something that makes you hesitant to discuss it further?",
+        "model_variant": "base"
+      }
+    ]
+  },
+  "sft": {
+    "metrics": {
+      "length_stats": {
+        "avg_words": 118.56,
+        "min_words": 7,
+        "max_words": 394,
+        "avg_chars": 737.76
+      },
+      "distinct_1": 0.3309716599190283,
+      "distinct_2": 0.807417488941817,
+      "perplexity": 3.640722922105333,
+      "bert_score": {
+        "precision": 0.8409987092018127,
+        "recall": 0.8653333783149719,
+        "f1": 0.8527042865753174
+      },
+      "rouge_l": {
+        "precision": 0.07234029629684756,
+        "recall": 0.15727096645169875,
+        "f1": 0.07723590929880993
+      }
+    },
+    "responses": [
+      {
+        "id": "anxiety_01",
+        "category": "anxiety",
+        "prompt": "I've been having panic attacks almost every day for the past two weeks. My heart races, I can't breathe, and I feel like I'm going to die. I don't know what's triggering them.",
+        "response": "It sounds like you're experiencing frequent panic attacks that are causing significant distress. Panic attacks can be terrifying and debilitating, but it's important to remember that they are not life-threatening. They are a normal response to stress or anxiety.\n\nYour symptoms, such as racing heart and difficulty breathing, are common physical sensations during a panic attack. It might be helpful to learn some relaxation techniques, such as deep breathing exercises or progressive muscle relaxation, to help manage these symptoms when they occur. These techniques can help calm your body and reduce the intensity of the panic attack.\n\nHowever, it's also essential to address any underlying triggers or causes of your panic attacks. Identifying potential triggers can be challenging, but keeping a journal or diary where you record your thoughts, emotions, and activities leading up to each panic attack may help identify patterns. This information can provide valuable insights into potential triggers and allow us to work together to develop coping strategies specific to your situation.\n\nAdditionally, practicing regular mindfulness meditation can help increase your awareness of your thoughts and emotions, allowing you to respond more effectively to stressors before they escalate into a panic attack. Mindfulness meditation involves focusing on the present moment without judgment, which can help reduce overall anxiety levels and improve emotional resilience.\n\nLastly, consider reaching out to trusted friends or family members for support. Sharing your experiences with others who understand and care about you can provide comfort and reassurance during difficult times.\n\nRemember, everyone's experience with panic attacks is unique, so it may take time to find what works best for you. Be patient with yourself as we work through this process together. If your symptoms persist or worsen, it may be beneficial to consult a mental health professional for further evaluation and guidance.",
+        "model_variant": "sft"
+      },
+      {
+        "id": "anxiety_02",
+        "category": "anxiety",
+        "prompt": "I get extremely anxious before any social situation. Even going to the grocery store makes me feel like everyone is watching and judging me. I've started avoiding going out altogether.",
+        "response": "That sounds really tough. How can you start feeling more comfortable in those situations?",
+        "model_variant": "sft"
+      },
+      {
+        "id": "depression_01",
+        "category": "depression",
+        "prompt": "I can't find motivation to do anything anymore. I used to love painting and hiking but now I just lie in bed all day. Everything feels pointless and gray.",
+        "response": "I am sorry you are feeling this way. Have you talked to someone about how you have been feeling?",
+        "model_variant": "sft"
+      },
+      {
+        "id": "depression_02",
+        "category": "depression",
+        "prompt": "I've been pretending to be happy around my friends and family but inside I feel completely empty. I don't want to burden anyone with how I'm really feeling.",
+        "response": "Hi there! It sounds like you're struggling with some difficult emotions right now. I'm here to support you and offer some guidance. It can be tough when we feel disconnected from our loved ones, especially during challenging times.\n\nFirstly, it's important to remember that you don't have to put on a facade all the time. While it may provide temporary relief to pretend happiness, it's crucial for your emotional well-being to express yourself authentically. Consider reaching out to someone you trust, such as a close friend or family member, who will listen without judgment. Opening up about what you're going through might help alleviate some of the pressure you feel.\n\nAdditionally, consider finding healthy outlets for your emotions. Engaging in activities that bring you joy or peace, whether it's journaling, painting, exercising, or even just taking long walks outdoors, can provide an opportunity for you to process your feelings privately. These activities can serve as a form of catharsis, allowing you to release built-up emotions in a safe space.\n\nIt could also be helpful to practice mindfulness or meditation exercises. Mindfulness involves being fully present in the current moment and accepting your thoughts and feelings without judgment. This technique helps cultivate a sense of calmness and allows you to observe your emotions objectively rather than getting overwhelmed by them. There are many resources available online or through apps that guide you through these practices if you'd like to learn more.\n\nRemember, seeking professional help is always an option worth considering. A therapist can provide additional support tailored specifically to your needs. They can assist you in exploring underlying causes contributing to your emptiness and develop coping strategies together.\n\nLastly, please know that you're not alone in this journey. Many people experience similar struggles and find healing along the way. Reach out for support whenever you need it, and keep reminding yourself that expressing your true feelings doesn't make you weak—it takes strength and courage.\n\nPlease take care of yourself, and remember that I'm here to support you every step of the way.",
+        "model_variant": "sft"
+      },
+      {
+        "id": "grief_01",
+        "category": "grief",
+        "prompt": "My mother passed away three months ago and I still can't accept it. Some days I pick up the phone to call her before I remember. The guilt of not spending more time with her is eating me alive.",
+        "response": "I'm so sorry for your loss. It sounds like you have a lot of grief to process. How do you think you will move forward?",
+        "model_variant": "sft"
+      },
+      {
+        "id": "grief_02",
+        "category": "grief",
+        "prompt": "My best friend died in a car accident last year. Everyone tells me I should be over it by now, but I still cry every night. Am I broken?",
+        "response": "I am so sorry for your loss!  Grief is such a unique experience that no one can explain to you how long it will take.  Everyone grieves differently.  If you are still having trouble moving on from this, maybe you could try therapy?",
+        "model_variant": "sft"
+      },
+      {
+        "id": "relationship_01",
+        "category": "relationships",
+        "prompt": "My partner and I have been arguing constantly for months. We can't seem to communicate without it turning into a fight. I love them but I'm exhausted and don't know if this is worth saving.",
+        "response": "It sounds like you're going through a really tough time in your relationship right now. Communication issues can be incredibly challenging, especially when they lead to constant arguments. It's completely understandable that you feel exhausted and unsure about whether this is worth saving.\n\nOne suggestion I have is to try practicing active listening during your conversations with your partner. This means giving each other space to speak without interruption and truly focusing on understanding what the other person is saying before responding. Sometimes, we get caught up in our own emotions and reactions that we forget to listen attentively.\n\nAnother helpful approach could be setting aside designated \"safe spaces\" within your home where both of you can take breaks from conflicts. These areas should provide a sense of calmness and allow individuals to collect themselves before continuing the discussion. Taking breaks doesn't mean avoiding the issue; it allows for a more productive conversation later on.\n\nAdditionally, consider seeking couples counseling together as an outside resource. A professional therapist can help facilitate healthier communication patterns and provide tools specifically tailored to your unique situation. They may offer insights and strategies that you haven't considered before, helping you navigate these challenges more effectively.\n\nRemember, relationships require effort from both parties involved. While it's natural to question if it's worth saving, taking some time to reflect on why you fell in love with your partner and what positive aspects still exist can shed light on potential avenues for growth and improvement.\n\nUltimately, only you can decide if this relationship is worth fighting for. Trust yourself and your instincts. You deserve happiness and fulfillment, so give yourself permission to explore all options available to find peace within your partnership.",
+        "model_variant": "sft"
+      },
+      {
+        "id": "relationship_02",
+        "category": "relationships",
+        "prompt": "I just found out my partner of five years has been lying to me about their finances. I feel betrayed and I don't know if I can ever trust them again.",
+        "response": "It sounds like you are very hurt and confused right now. This is certainly not an easy thing to find out. Can you tell me more about what happened?",
+        "model_variant": "sft"
+      },
+      {
+        "id": "stress_01",
+        "category": "work_stress",
+        "prompt": "My job is destroying my mental health. I work 60+ hours a week, my boss constantly criticizes me, and I've started having headaches and stomach problems. But I can't afford to quit.",
+        "response": "I'm so sorry you're feeling this way! I know how it feels when your work gets in the way of your mental health. It sounds like you have some big decisions ahead of you, and I encourage you to take care of yourself while you figure things out.",
+        "model_variant": "sft"
+      },
+      {
+        "id": "stress_02",
+        "category": "academic_stress",
+        "prompt": "I'm a college student and I'm failing two classes. My parents are paying for my education and I feel like such a disappointment. I can't concentrate on anything and I keep procrastinating.",
+        "response": "Oh no! That sounds terrible. Are you okay? What is going through your mind right now?",
+        "model_variant": "sft"
+      },
+      {
+        "id": "self_esteem_01",
+        "category": "self_esteem",
+        "prompt": "I hate the way I look. I compare myself to everyone on social media and I always come up short. I've started skipping meals to try to lose weight and I know it's not healthy.",
+        "response": "Hey there! I'm really sorry to hear that you're feeling this way. It sounds like you are putting a lot of pressure on yourself when it comes to how you look and that is causing some negative thoughts and behaviors. This can be a common struggle for many people these days, especially given our current culture where everyone seems to share so much about their lives online. There are a few things we could explore in order to help you find more peace around your body image. One thing to consider is what messages are you receiving from others on social media? Are they accurate reflections of reality? Have you ever considered that people only show off their highlight reels and rarely their behind-the-scenes moments? If you feel comfortable, it might be worth trying to unfollow accounts that trigger those comparisons for you and focus on following accounts that inspire and support you instead. Another idea would be to think about why you want to lose weight and what the underlying beliefs are that are driving those desires. Is it because you believe it will make you happier? Healthier? More attractive? What if we explored the evidence for and against each of those beliefs? Finally, have you thought about reaching out to someone who has been through something similar? Sometimes talking to someone who has gone through an experience can provide valuable insights and different perspectives. You don't necessarily need to go to therapy to do this - maybe a friend, family member, or even an online community of people with similar struggles. Hope this helps and take care!",
+        "model_variant": "sft"
+      },
+      {
+        "id": "self_esteem_02",
+        "category": "self_esteem",
+        "prompt": "I feel like I'm not good enough for anyone. Every relationship I've had, the person eventually leaves. Maybe there's something fundamentally wrong with me.",
+        "response": "It sounds like you're feeling very down about your relationships. It can be difficult when it feels like we have low self-esteem and our partners leave us. Have you tried therapy?",
+        "model_variant": "sft"
+      },
+      {
+        "id": "trauma_01",
+        "category": "trauma",
+        "prompt": "I was in an abusive relationship for three years. I finally got out, but I flinch when anyone raises their voice and I have nightmares almost every night. I don't feel safe anywhere.",
+        "response": "I am glad you left your abuser, that takes so much strength! You are very brave. I hope you can find peace within yourself now and that your life is filled with happiness.",
+        "model_variant": "sft"
+      },
+      {
+        "id": "trauma_02",
+        "category": "trauma",
+        "prompt": "Something happened to me as a child that I've never told anyone about. It's affecting my relationships and I have flashbacks. I want to talk about it but I'm terrified.",
+        "response": "I am so sorry you had to go through something traumatic as a child.  It takes courage to reach out for help and to try to address your past experiences.  You are taking an important step towards healing and getting better by talking about it now.  There is no right or wrong time to deal with things in our past; there isn't ever really such a thing.  Sometimes we need to wait until we feel ready and able to cope before we deal with certain issues, other times we need to face them head on.  If you're feeling overwhelmed, a trauma therapist can be very helpful.  Trauma therapists specialize in helping people process and heal from difficult events.  They use many different approaches depending on what works best for each client and the nature of the event(s).  The one thing they all have in common is an approach called \"trauma focused\" meaning they work directly with you to find ways to resolve any negative emotions or beliefs that developed because of your experience.  This is not an easy process (it's often painful), but it's worth it in the end.  Trauma therapists will also teach you coping skills and ways to manage your triggers.  Triggers can be things that remind us of what happened to us which make us feel upset or scared again.  Your therapist will help you figure out how to handle those triggers in healthy ways.  Also, therapy is confidential.  Only if there is an imminent danger to yourself or someone else will they break confidentiality.  So you can trust what you tell them will stay private.",
+        "model_variant": "sft"
+      },
+      {
+        "id": "loneliness_01",
+        "category": "loneliness",
+        "prompt": "I moved to a new city for work six months ago and I haven't made a single friend. I spend every weekend alone in my apartment. I feel invisible.",
+        "response": "Have you tried joining any social groups?",
+        "model_variant": "sft"
+      },
+      {
+        "id": "family_01",
+        "category": "family",
+        "prompt": "My parents are going through a messy divorce and both keep trying to get me to take sides. I love them both but I feel torn apart. I've started having anxiety attacks because of it.",
+        "response": "I'm sorry you're going through this! I can't imagine how hard that must be for you. It is totally normal to feel conflicted in such circumstances. Have you thought about talking to a therapist? They can help you process your emotions.",
+        "model_variant": "sft"
+      },
+      {
+        "id": "addiction_01",
+        "category": "addiction",
+        "prompt": "I've been drinking every night to cope with my stress. What started as a glass of wine has turned into a whole bottle. I know I have a problem but I don't know how to stop.",
+        "response": "Hi there! It sounds like you're really struggling with your alcohol consumption. Drinking can often be a way to numb our emotions or escape from reality, so it's understandable that it has become an unhealthy coping mechanism for you. However, it is important to address this issue because excessive drinking can lead to various negative consequences on both your physical and mental well-being.\n\nFirstly, it might help to consider why you turn to alcohol in order to cope with stress. Are there any underlying triggers or specific situations that make you want to drink more than usual? Identifying these patterns could provide valuable insights into your emotional state and allow you to develop healthier alternatives for managing stress.\n\nOne approach worth exploring is finding alternative ways to relax and unwind when feeling stressed. Engaging in activities such as exercise, meditation, deep breathing exercises, journaling, or pursuing hobbies can offer similar benefits without the risk associated with alcohol abuse. Experimenting with different strategies may take some time, but it can be rewarding to find what works best for you.\n\nAdditionally, seeking support from friends, family, or even online communities who understand your struggles can make a significant difference. Sharing your concerns with someone you trust not only provides emotional support but also opens up opportunities for accountability and encouragement. Remember, reaching out doesn't mean you're weak; rather, it shows strength and courage in recognizing the need for change.\n\nIt's crucial to set realistic goals for yourself regarding reducing or eliminating alcohol consumption altogether. Breaking down larger objectives into smaller steps can make them feel less overwhelming. For example, instead of aiming to quit completely right away, try gradually decreasing the amount you drink each day until you reach a manageable level. Celebrate small victories along the way to boost your motivation.\n\nLastly, if you ever feel overwhelmed or find yourself unable to resist the urge to drink despite your efforts, consider seeking professional assistance. There are many resources available, including helplines, hotlines, and treatment centers that can provide guidance tailored specifically to your needs. They can assist you in developing personalized strategies to overcome addiction and improve overall well-being.\n\nRemember, quitting or reducing alcohol consumption takes time and effort. Be patient and kind to yourself throughout this process. You deserve support and happiness, and with perseverance, you can regain control over your relationship with alcohol.",
+        "model_variant": "sft"
+      },
+      {
+        "id": "sleep_01",
+        "category": "sleep",
+        "prompt": "I haven't had a proper night's sleep in weeks. My mind races the moment I lie down, replaying everything that went wrong during the day. I'm exhausted but I can't turn my brain off.",
+        "response": "It sounds like you're experiencing symptoms of insomnia. Insomnia is characterized by difficulty falling asleep, staying asleep, or getting quality rest despite adequate opportunity for sleep. It can be caused by stress, anxiety, depression, or other factors. Have you considered trying relaxation techniques such as deep breathing exercises, progressive muscle relaxation, or mindfulness meditation? These practices can help calm your mind and body, making it easier to fall asleep. Additionally, establishing a consistent bedtime routine and creating a sleep-friendly environment can also contribute to better sleep. It might be helpful to limit exposure to screens before bed, as the blue light emitted by electronic devices can interfere with sleep regulation. If these strategies don't improve your sleep, it could be beneficial to consult a healthcare professional who can provide further guidance and support tailored to your specific needs.",
+        "model_variant": "sft"
+      },
+      {
+        "id": "crisis_01",
+        "category": "crisis",
+        "prompt": "I don't see the point in going on anymore. Nothing is going to get better. I've been thinking about ending it all and I just want the pain to stop.",
+        "response": "There have been several times when you thought that life was not worth living. These thoughts of death seem to come up more frequently lately. You feel as if nothing will ever change and that there is no hope for things to improve.",
+        "model_variant": "sft"
+      },
+      {
+        "id": "crisis_02",
+        "category": "crisis",
+        "prompt": "I've been cutting myself to deal with the emotional pain. It's the only thing that makes me feel something. I know I need help but I'm ashamed.",
+        "response": "Thank you for reaching out and sharing your experience with me. I understand how difficult it can be to reach out for help when dealing with emotional pain, especially when you have found relief in harmful behaviors like self-harm. Your courage in recognizing that you need assistance is an important step towards healing.\n\nSelf-harm is often used as a coping mechanism for intense emotions, and it's common for people who struggle with emotional regulation and distress. However, it's crucial to find healthier ways to cope with these emotions. Together, we can work on developing alternative strategies that will help you manage your emotional pain without resorting to self-harm.\n\nOne approach we could consider is exploring mindfulness techniques such as deep breathing exercises or grounding exercises. These practices can help bring your focus back to the present moment and provide some relief from overwhelming thoughts and emotions. Additionally, engaging in activities that promote relaxation, such as yoga or journaling, might also be beneficial.\n\nAnother aspect we can address together is identifying triggers or patterns that lead you to engage in self-harming behavior. By understanding what sets off these urges, we can develop a plan to redirect your attention towards healthier alternatives. This may involve creating a list of coping mechanisms tailored specifically to your needs, which could include reaching out to trusted friends or family members, engaging in creative outlets like art or music, or seeking professional support through therapy.\n\nIt's essential to remember that change takes time and effort, so please be patient with yourself throughout this process. Healing isn't linear, and there will likely be setbacks along the way. But with persistence and support, it is possible to overcome these challenges and find healthier ways to navigate your emotions.\n\nIf you ever feel overwhelmed or need someone to talk to, don't hesitate to reach out to me or other trusted individuals in your life. Remember, you are not alone in this journey, and there is hope for a brighter future ahead.",
+        "model_variant": "sft"
+      },
+      {
+        "id": "anger_01",
+        "category": "anger",
+        "prompt": "I've been snapping at everyone around me lately. My kids, my spouse, my coworkers. I feel this constant rage building up inside me and I don't know where it's coming from.",
+        "response": "It sounds like you're experiencing some intense emotions right now. Can you tell me more about what's going on? Is there anything in particular that seems to trigger these feelings?",
+        "model_variant": "sft"
+      },
+      {
+        "id": "identity_01",
+        "category": "identity",
+        "prompt": "I'm in my 30s and I still don't know who I am or what I want from life. Everyone around me seems to have it figured out. I feel like I'm just going through the motions.",
+        "response": "That can be really frustrating! It is very normal though for someone of your age to still not have their entire life planned out. A lot of people go through that phase. You will find yourself as you experience more life events. Just keep trying new things and see where they take you.",
+        "model_variant": "sft"
+      },
+      {
+        "id": "parenting_01",
+        "category": "parenting",
+        "prompt": "I yelled at my 5-year-old today and the look on her face broke my heart. I'm turning into my parents and that terrifies me. I don't want to repeat the cycle but I don't know how to be different.",
+        "response": "It sounds as though you're experiencing some guilt about your outburst towards your child. It is very common for parents to feel this way especially when they start to realize that they may have grown up in households where yelling was used as a form of communication. There are many ways to change the way we interact with our children. One method is called \"Time In\". When a parent feels themselves getting angry or frustrated, instead of yelling, they can take a break from the situation and go to another room to calm down. The goal here would be to give yourself time to collect your thoughts before interacting with your child again. Another method is using positive reinforcement. When your child does something good, praise them. This will help them understand what behavior is acceptable. As well, you could try having a family meeting to talk about the effects of yelling and come up with alternative methods to communicate such as taking deep breaths or counting to ten.",
+        "model_variant": "sft"
+      },
+      {
+        "id": "burnout_01",
+        "category": "burnout",
+        "prompt": "I used to be passionate about my career in healthcare but after the last few years I feel completely burned out. I'm emotionally numb with my patients and I feel guilty about it.",
+        "response": "Wow that is tough. It sounds like you have been dealing with some heavy emotions. What happened?",
+        "model_variant": "sft"
+      },
+      {
+        "id": "ocd_01",
+        "category": "ocd",
+        "prompt": "I have to check if the door is locked exactly seven times before I can leave the house. If I don't, I'm convinced something terrible will happen to my family. I know it's irrational but I can't stop.",
+        "response": "Hey there, that sounds really tough! Have you ever tried to make yourself do it six times instead?",
+        "model_variant": "sft"
+      }
+    ]
+  },
+  "dpo": {
+    "metrics": {
+      "length_stats": {
+        "avg_words": 198.2,
+        "min_words": 56,
+        "max_words": 376,
+        "avg_chars": 1246.32
+      },
+      "distinct_1": 0.2623612512613522,
+      "distinct_2": 0.7115618661257607,
+      "perplexity": 3.1327009308577702,
+      "bert_score": {
+        "precision": 0.8195936679840088,
+        "recall": 0.8811230659484863,
+        "f1": 0.849155068397522
+      },
+      "rouge_l": {
+        "precision": 0.04751653276788671,
+        "recall": 0.2604828535909975,
+        "f1": 0.07902094436051271
+      }
+    },
+    "responses": [
+      {
+        "id": "anxiety_01",
+        "category": "anxiety",
+        "prompt": "I've been having panic attacks almost every day for the past two weeks. My heart races, I can't breathe, and I feel like I'm going to die. I don't know what's triggering them.",
+        "response": "It sounds incredibly distressing to experience panic attacks daily. Let's take some time to understand these episodes better and find ways to manage them. \n\nCan you tell me more about what happens just before a panic attack? Is there anything specific that seems to trigger it, such as certain environments, thoughts, or physical sensations?\n\nAlso, have you noticed any patterns in your emotions leading up to the attacks? Are you feeling anxious, stressed, or overwhelmed beforehand? Identifying triggers or precursors might help us develop strategies to prevent or minimize future attacks.\n\nIn addition to understanding potential triggers, let's focus on coping mechanisms during an episode. What do you usually do when a panic attack occurs? Have you tried deep breathing exercises, progressive muscle relaxation, or grounding techniques? Sometimes, knowing how to ground ourselves in the present moment can be helpful.\n\nLastly, it's essential to consider seeking support from loved ones or considering therapy if these attacks continue. A therapist can provide personalized guidance tailored to your unique needs. Would you be open to exploring this option further?",
+        "model_variant": "dpo"
+      },
+      {
+        "id": "anxiety_02",
+        "category": "anxiety",
+        "prompt": "I get extremely anxious before any social situation. Even going to the grocery store makes me feel like everyone is watching and judging me. I've started avoiding going out altogether.",
+        "response": "It sounds like you're experiencing significant anxiety in social situations, which can be really challenging. It's understandable that you might feel self-conscious about being judged by others.\n\nCan you tell me more about what specifically triggers this feeling of being watched and judged? Is it a particular aspect of these situations, such as meeting new people or being in crowded spaces? Understanding your specific triggers can help us work towards addressing them.\n\nAdditionally, have you noticed any patterns or common thoughts that come up for you when you start feeling anxious in these situations? Sometimes, our minds can play tricks on us, making things seem worse than they actually are. Identifying those patterns can give us clues about how we can challenge and reframe those negative thoughts.\n\nLastly, I want to acknowledge that avoiding going out altogether isn't an easy solution, but it may also not be sustainable in the long term. Are there any small steps you think you could take to gradually build up your comfort level in social situations? We can work together to find ways to make these experiences less overwhelming for you.",
+        "model_variant": "dpo"
+      },
+      {
+        "id": "depression_01",
+        "category": "depression",
+        "prompt": "I can't find motivation to do anything anymore. I used to love painting and hiking but now I just lie in bed all day. Everything feels pointless and gray.",
+        "response": "It sounds like you're feeling really overwhelmed and disconnected from activities that used to bring you joy. That must be tough.\n\nCan you tell me more about what's been going on lately? What changes have you noticed in your life that might be contributing to this lack of motivation?\n\nAlso, I want to let you know that it takes a lot of courage to reach out for support when we're struggling. It seems like you've already taken an important step by talking to someone about how you're feeling. That shows strength!\n\nDo you think there's something specific that triggered these feelings, or has it been building up over time?",
+        "model_variant": "dpo"
+      },
+      {
+        "id": "depression_02",
+        "category": "depression",
+        "prompt": "I've been pretending to be happy around my friends and family but inside I feel completely empty. I don't want to burden anyone with how I'm really feeling.",
+        "response": "It takes a lot of courage to acknowledge that you're not feeling as happy as everyone else perceives you to be. It sounds like you're worried about how others might react if they knew your true feelings.\n\nFirstly, please know that you're not alone in this experience. Many people struggle with hiding their emotions behind a mask of happiness, especially when it feels safer than being vulnerable. But here's the thing - bottling up your feelings can actually make them harder to deal with over time.\n\nCan you tell me more about what's going on? What's making you feel empty? Is there something specific that triggered these feelings, or has it been building up gradually?\n\nAlso, have you considered talking to someone you trust about how you're feeling? Sometimes just sharing our struggles with someone who cares can help lighten the load. If you're unsure where to start, we could work together to find ways to gradually open up to those closest to you.",
+        "model_variant": "dpo"
+      },
+      {
+        "id": "grief_01",
+        "category": "grief",
+        "prompt": "My mother passed away three months ago and I still can't accept it. Some days I pick up the phone to call her before I remember. The guilt of not spending more time with her is eating me alive.",
+        "response": "I'm so sorry for your loss. Losing someone we love can be incredibly painful and it's completely normal to feel overwhelmed with grief. It sounds like you're experiencing a mix of emotions, including guilt, sadness, and perhaps even regret.\n\nIt's understandable that you're struggling to come to terms with your mom being gone. Grief has its own timeline, and everyone experiences it differently. It may take some time for the pain to lessen and acceptance to set in.\n\nOne thing to consider is how you can honor your mom's memory while also taking care of yourself during this difficult time. This could involve doing something that reminds you of her, whether it's cooking one of her favorite recipes, looking at photos together as a family, or even just talking about her with others who loved her too.\n\nIn terms of your guilt, it might be helpful to practice self-compassion. Remind yourself that there were circumstances beyond your control, and you did the best you could given what you knew at the time. Instead of dwelling on what you didn't do, try focusing on the memories and positive aspects of your relationship with your mom. \n\nHow have you been coping since she passed? Is there anything specific that feels challenging for you right now?",
+        "model_variant": "dpo"
+      },
+      {
+        "id": "grief_02",
+        "category": "grief",
+        "prompt": "My best friend died in a car accident last year. Everyone tells me I should be over it by now, but I still cry every night. Am I broken?",
+        "response": "I'm truly sorry for your loss. It's completely normal to continue feeling the pain of losing someone so close to you even after some time has passed. Grief is a complex process that doesn't follow any set timeline, and everyone experiences it differently.\n\nIt sounds like you're feeling a bit misunderstood by others who might not fully understand the depth of your emotions. They may not have experienced such a profound loss themselves, which can make it difficult for them to grasp why you're still hurting.\n\nAllow yourself to feel these emotions without judgment. It's okay to grieve at your own pace. You don't need to \"be over\" anything; what you need is to heal within your own timeframe.\n\nCan you tell me more about what happens when you start crying each night? Is there something specific that triggers those moments, or is it just an overwhelming sense of sadness that washes over you?\n\nLet's work together to create space for your grief and find healthy ways to manage it.",
+        "model_variant": "dpo"
+      },
+      {
+        "id": "relationship_01",
+        "category": "relationships",
+        "prompt": "My partner and I have been arguing constantly for months. We can't seem to communicate without it turning into a fight. I love them but I'm exhausted and don't know if this is worth saving.",
+        "response": "It sounds incredibly challenging and draining for you to be experiencing such constant conflict in your relationship. It's understandable that you're feeling exhausted and questioning whether it's worth continuing.\n\nFirstly, let's acknowledge that all relationships go through ups and downs, and conflicts are a natural part of any partnership. However, when they become too frequent and intense, it can certainly take a toll on both partners.\n\nOne approach we could consider is exploring effective communication strategies together. Sometimes, conflicts arise from misunderstandings or unaddressed issues that simmer beneath the surface. It might be helpful to identify specific triggers or patterns that contribute to these arguments. Are there certain topics or behaviors that consistently lead to disagreements?\n\nAdditionally, taking time to reflect on what you each need from the other and expressing those needs openly can make a significant difference. What are some things that would help improve the quality of your interactions? Perhaps discussing expectations around communication styles, problem-solving approaches, or even establishing boundaries could provide clarity and reduce tension.\n\nAnother aspect to consider is self-care and stress management. When we feel overwhelmed, our emotional reactivity increases, making it harder to navigate conflicts constructively. Engaging in activities that promote relaxation, like exercise, mindfulness, or hobbies, may help manage stress levels.\n\nLastly, remember that change takes effort from both partners. While it's essential to examine your own actions and reactions within the relationship, also recognize that your partner has agency and responsibility as well. It might be beneficial to discuss what changes you'd both like to see and work towards implementing them together.\n\nUltimately, every relationship is unique, and only you and your partner can decide what feels right for you. Take some space to think about your feelings, values, and priorities before making any decisions. If you find it difficult to move forward, seeking support from a couples therapist or individual counseling could offer additional guidance tailored to your specific situation.",
+        "model_variant": "dpo"
+      },
+      {
+        "id": "relationship_02",
+        "category": "relationships",
+        "prompt": "I just found out my partner of five years has been lying to me about their finances. I feel betrayed and I don't know if I can ever trust them again.",
+        "response": "It sounds like you're going through a really tough time right now. Discovering that someone you trusted has been hiding information from you can be incredibly painful and leave you feeling confused and hurt. It's completely understandable that you're questioning whether you can trust your partner again.\n\nFirstly, it's important to acknowledge and validate your emotions. Betrayal is a heavy burden to carry, and it's okay to feel angry, sad, and scared all at once. Give yourself permission to process these feelings without judgment.\n\nCan you tell me more about what led you to discover this secret? Was there something specific that made you suspect something was off?\n\nAlso, how have you been coping with this revelation so far? Are there any strategies or support systems in place that have helped you manage your emotions during this challenging time?",
+        "model_variant": "dpo"
+      },
+      {
+        "id": "stress_01",
+        "category": "work_stress",
+        "prompt": "My job is destroying my mental health. I work 60+ hours a week, my boss constantly criticizes me, and I've started having headaches and stomach problems. But I can't afford to quit.",
+        "response": "It sounds like you're going through a really tough time at your job, and it's affecting various aspects of your well-being. It takes a lot of courage to acknowledge this and reach out for support.\n\nFirstly, let's validate your experience - working long hours under constant criticism can be incredibly draining both physically and emotionally. The fact that you're experiencing headaches and stomach problems as a result is not surprising. Your body is sending signals that something needs attention.\n\nTo address these challenges, it might be helpful to start exploring some coping strategies and boundaries in your workplace. Have you considered speaking with your manager about your workload and seeing if there are any adjustments that could be made? Sometimes, being open and honest about our limitations can lead to more manageable expectations.\n\nAdditionally, taking care of yourself outside of work is crucial. What activities bring you joy and help you relax? Incorporating those into your routine, even if it's just a few minutes each day, can make a big difference. Exercise, meditation, or spending time in nature are great options to consider.\n\nLastly, while quitting might seem impossible right now, have you thought about other potential solutions? Could you look into part-time positions, flexible schedules, or even career counseling to find a path that aligns better with your needs?\n\nRemember, your mental health matters. Taking small steps towards creating a healthier balance will be beneficial in the long run.",
+        "model_variant": "dpo"
+      },
+      {
+        "id": "stress_02",
+        "category": "academic_stress",
+        "prompt": "I'm a college student and I'm failing two classes. My parents are paying for my education and I feel like such a disappointment. I can't concentrate on anything and I keep procrastinating.",
+        "response": "It sounds like you're feeling overwhelmed and disappointed in yourself right now, especially given that your parents are supporting your education financially. It's completely normal to feel this way when we're not meeting our own expectations, let alone those of others who have invested so much in us.\n\nFirstly, it's essential to acknowledge that everyone makes mistakes and experiences setbacks at some point in their academic journey. This is an opportunity for growth and learning, rather than a reflection of your worth as a person.\n\nCan you tell me more about what specifically is causing you to struggle with concentration and procrastination? Is there something else going on in your life that might be contributing to these challenges?\n\nAdditionally, it could be helpful to break down your tasks into smaller, manageable chunks, set achievable goals for each day or week, and create a schedule to stay organized. Sometimes, having a clear plan can make things feel less overwhelming.\n\nAre there any resources on campus that you've considered using, such as tutoring services, counseling, or academic advisors? They may be able to provide support tailored to your specific needs and help you get back on track.\n\nLastly, remember that it's okay to ask for help from your parents if you need it. Open communication with them about how you're feeling can lead to finding solutions together. You don't have to carry the burden alone.\n\nLet's work through this together. What do you think would be a good starting point for you?",
+        "model_variant": "dpo"
+      },
+      {
+        "id": "self_esteem_01",
+        "category": "self_esteem",
+        "prompt": "I hate the way I look. I compare myself to everyone on social media and I always come up short. I've started skipping meals to try to lose weight and I know it's not healthy.",
+        "response": "It sounds really tough that you're feeling this way about your appearance and comparing yourself to others on social media is having such an impact. It's great that you recognize that skipping meals isn't a healthy solution, though.\n\nFirstly, let me tell you that you are not alone in how you're feeling. Many people struggle with body image issues and comparing ourselves to others can be a real challenge. \n\nCan you think of any specific times when these thoughts about your appearance started bothering you more? Was there something significant happen recently, or has it been going on for a while?\n\nAlso, what do you hope to achieve by losing weight? Sometimes understanding the underlying motivations behind our actions can help us find alternative paths forward.\n\nLastly, have you ever talked to anyone else about how you feel? Sharing with friends, family, or even a trusted mentor could provide some valuable support and perspective.\n\nLet's work together to explore these questions and see if we can uncover some ways to help you build a healthier relationship with food, your body, and social media!",
+        "model_variant": "dpo"
+      },
+      {
+        "id": "self_esteem_02",
+        "category": "self_esteem",
+        "prompt": "I feel like I'm not good enough for anyone. Every relationship I've had, the person eventually leaves. Maybe there's something fundamentally wrong with me.",
+        "response": "It sounds like you're feeling quite down about your relationships, wondering if there might be something inherently flawed in yourself that leads people away. It's understandable to have those thoughts when we experience patterns of rejection or disappointment in our relationships.\n\nLet's take a step back and look at this together. Have you considered that maybe these experiences aren't solely about you? Relationships can be complex, influenced by numerous factors including both parties' needs, expectations, and external circumstances. Sometimes, it has nothing to do with any inherent quality within us but rather a mismatch between what two individuals bring to the table.\n\nCould you tell me more about how these past relationships ended? Was it a mutual decision or were they initiated by one party? Understanding the specifics might help shed some light on whether there is an underlying pattern worth examining further.\n\nIn addition, let's talk about what \"good enough\" means to you. What does being 'good enough' look like in a relationship? How do you measure it? This could be a useful exercise in clarifying your standards and values regarding relationships.\n\nLastly, remember that seeking therapy shows strength and courage. You're taking proactive steps towards understanding yourself better. Let's work together to explore these feelings and identify areas where growth might be possible without labeling yourself as fundamentally flawed.",
+        "model_variant": "dpo"
+      },
+      {
+        "id": "trauma_01",
+        "category": "trauma",
+        "prompt": "I was in an abusive relationship for three years. I finally got out, but I flinch when anyone raises their voice and I have nightmares almost every night. I don't feel safe anywhere.",
+        "response": "It takes immense strength and courage to leave an abusive relationship, so kudos to you for taking that step towards healing and reclaiming your life. It's completely understandable that you're still dealing with the aftermath of such a traumatic experience.\n\nFirstly, know that you deserve to feel safe again, and it's okay to acknowledge how scared and vulnerable you might be feeling right now. These physical reactions, like flinching at raised voices or experiencing nightmares, are common symptoms of trauma. They are your body's way of alerting you to potential danger even when there isn't any immediate threat.\n\nTo address these feelings, it could be helpful to start exploring grounding techniques that can help you manage anxiety and panic when faced with loud noises or stressful situations. Deep breathing exercises, mindfulness practices, or engaging in activities that bring you joy can provide temporary relief. \n\nMoreover, establishing a routine that includes regular exercise, healthy eating, and quality sleep can significantly contribute to improving your overall well-being. Engaging in creative outlets, journaling, or talking to trusted friends or family members about what you've been through can also offer emotional support.\n\nConsider seeking professional help from a therapist who specializes in trauma. They can guide you through evidence-based therapies such as Cognitive Behavioral Therapy (CBT), Eye Movement Desensitization and Reprocessing (EMDR), or Trauma-Focused Cognitive Behavioral Therapy (TF-CBT). These approaches focus on helping individuals process and cope with past traumas while developing resilience and coping skills for future challenges.\n\nRemember, healing is a journey, not a destination. You've already taken a huge step by recognizing your need for help, and it's normal to continue working through difficult emotions along the way. Your feelings of fear and vulnerability will lessen over time as you build a strong foundation of self-care and seek the support that you deserve.\n\nLastly, remember that you are not alone. There are numerous organizations and resources available that can assist survivors of abuse. The National Domestic Violence Hotline (1-800-799-7233) or the National Dating Abuse Helpline (1-866-331-9474) are just two examples of places where you can find confidential support and connect with others who understand what you're going through.\n\nPlease take care of yourself, both physically and emotionally. You are stronger than you think, and healing is possible.",
+        "model_variant": "dpo"
+      },
+      {
+        "id": "trauma_02",
+        "category": "trauma",
+        "prompt": "Something happened to me as a child that I've never told anyone about. It's affecting my relationships and I have flashbacks. I want to talk about it but I'm terrified.",
+        "response": "It takes a lot of courage to acknowledge that there is something from your past that you're not comfortable discussing, especially when it affects your current life. It's completely understandable to feel scared or hesitant about sharing such a sensitive experience.\n\nFirstly, please know that you are in a safe space here, and I'm here to listen without judgment. I believe that talking about what happened can be an important step towards healing and understanding its impact on your present-day experiences.\n\nTo start, could you tell me more about what specifically has been triggering these flashbacks? Are they related to specific people, places, or activities? Understanding what might be causing them will help us identify patterns and develop strategies for coping.\n\nAdditionally, it may be helpful to understand how these flashbacks affect you. What do you typically experience during these episodes (e.g., emotions, physical sensations, thoughts)? This awareness can provide valuable insights into the underlying pain and guide our therapeutic approach.\n\nLastly, let's discuss at what pace we move forward. We don't have to tackle everything all at once. How would you like to proceed? Would you prefer starting small, perhaps exploring general feelings and reactions, before delving deeper into details? Or do you feel ready to dive right in?\n\nRemember, this is entirely up to you, and we'll work together to create a pace that feels comfortable for you. Your safety and well-being are our top priority throughout this process.",
+        "model_variant": "dpo"
+      },
+      {
+        "id": "loneliness_01",
+        "category": "loneliness",
+        "prompt": "I moved to a new city for work six months ago and I haven't made a single friend. I spend every weekend alone in my apartment. I feel invisible.",
+        "response": "It sounds really tough being in a new place without any close connections. It can be overwhelming to start from scratch and build a social network. What have you tried so far to meet people in your new city? Are there any specific activities or groups that interest you that might help you connect with others?",
+        "model_variant": "dpo"
+      },
+      {
+        "id": "family_01",
+        "category": "family",
+        "prompt": "My parents are going through a messy divorce and both keep trying to get me to take sides. I love them both but I feel torn apart. I've started having anxiety attacks because of it.",
+        "response": "It sounds incredibly challenging for you to be caught in the middle of your parents' divorce and feeling pressured to choose sides. It's understandable that this is causing you significant distress, leading to anxiety attacks. \n\nFirstly, please know that you don't have to take sides. Your loyalty should be to yourself and doing what feels right for you, not necessarily what each parent wants. It's okay to prioritize maintaining a healthy relationship with both of them separately.\n\nCan you tell me more about how these anxiety attacks manifest? What do they look like for you - physically, emotionally, and mentally?\n\nAlso, how have your parents been asking you to take sides, and what specific pressures or conversations have made you feel torn? Understanding the dynamics can help us work towards finding ways to navigate this difficult situation.",
+        "model_variant": "dpo"
+      },
+      {
+        "id": "addiction_01",
+        "category": "addiction",
+        "prompt": "I've been drinking every night to cope with my stress. What started as a glass of wine has turned into a whole bottle. I know I have a problem but I don't know how to stop.",
+        "response": "It takes a lot of courage to acknowledge that you have a problem with your drinking. It's understandable that you're feeling stressed, and it seems like you've found a way to temporarily alleviate those feelings through alcohol. However, it's great that you recognize that this isn't a healthy long-term solution.\n\nLet's start by exploring why you turn to drinking when you feel stressed. Is there something specific that triggers these feelings for you? Is it related to work, relationships, or something else entirely?\n\nAlso, what do you think would happen if you stopped drinking tonight? How do you imagine yourself coping with your stress without relying on alcohol?\n\nWe can work together to find alternative ways to manage your stress and emotions in healthier ways. This might involve identifying other activities that bring you joy, practicing relaxation techniques, or even seeking support from friends or family members. We can also discuss strategies for setting boundaries and taking care of yourself during particularly stressful times.\n\nRemember, change is possible, and it starts with small steps. Let's take one step at a time towards finding healthier ways to cope with your stress.",
+        "model_variant": "dpo"
+      },
+      {
+        "id": "sleep_01",
+        "category": "sleep",
+        "prompt": "I haven't had a proper night's sleep in weeks. My mind races the moment I lie down, replaying everything that went wrong during the day. I'm exhausted but I can't turn my brain off.",
+        "response": "It sounds like you're really struggling with racing thoughts at night, which is preventing you from getting a good night's rest. This can be incredibly frustrating and draining.\n\nFirstly, let me acknowledge how difficult it must be for you to experience this constant racing of your mind. It's not uncommon for people to have trouble sleeping when they're feeling overwhelmed or stressed. Have you noticed any specific triggers or patterns that tend to make your mind start racing before bed? Understanding these patterns might help us identify some potential strategies to address them.\n\nAdditionally, what are some things that usually help you relax before going to bed? Do you engage in any calming activities such as reading, taking a warm bath, or practicing deep breathing exercises? Exploring different relaxation techniques could potentially provide relief for your racing thoughts.\n\nLastly, would you feel comfortable discussing any underlying issues or concerns that might be contributing to your stress levels? Sometimes addressing the root causes of our anxiety can help alleviate the symptoms we experience at night.",
+        "model_variant": "dpo"
+      },
+      {
+        "id": "crisis_01",
+        "category": "crisis",
+        "prompt": "I don't see the point in going on anymore. Nothing is going to get better. I've been thinking about ending it all and I just want the pain to stop.",
+        "response": "It sounds like you're feeling incredibly overwhelmed right now, and I can understand that it might feel like there's no way out of this darkness. It takes an immense amount of courage to share these feelings with someone, so please know that you're not alone.\n\nCan you tell me more about what's causing you such distress? What specific challenges have you been facing lately? Sometimes talking through our struggles with a compassionate ear can provide some clarity and help us find new perspectives.\n\nRemember, your life has inherent value, and there are people who care deeply about you. While it may be hard to believe right now, there are ways to navigate through these difficult emotions. We can work together to explore coping strategies, build resilience, and find meaning even in the midst of hardship.\n\nIs there anything in particular that gives you hope or something that brings you comfort during these tough times?",
+        "model_variant": "dpo"
+      },
+      {
+        "id": "crisis_02",
+        "category": "crisis",
+        "prompt": "I've been cutting myself to deal with the emotional pain. It's the only thing that makes me feel something. I know I need help but I'm ashamed.",
+        "response": "It takes a lot of courage to share this with someone, so thank you for trusting me with your secret. It sounds like you're feeling really overwhelmed by your emotions right now, and using self-harm as a way to cope might be providing temporary relief, but it can also cause more harm in the long run.\n\nCan you tell me a bit about what triggers these feelings of emotional pain? Is there anything specific happening in your life right now that feels particularly challenging?\n\nAlso, have you talked to anyone else about how you're feeling, such as friends or family members? Sometimes just having someone to talk through things with can make a big difference.\n\nLastly, do you think we could work together to find some alternative coping mechanisms that don't involve hurting yourself? There are many healthy ways to express and manage your emotions, and we can explore those together.",
+        "model_variant": "dpo"
+      },
+      {
+        "id": "anger_01",
+        "category": "anger",
+        "prompt": "I've been snapping at everyone around me lately. My kids, my spouse, my coworkers. I feel this constant rage building up inside me and I don't know where it's coming from.",
+        "response": "It sounds really tough for you right now. It can be overwhelming when we're experiencing intense emotions that we don't fully understand. Can you tell me more about what's been going on in your life recently? Have there been any major changes, stressors, or challenges that might contribute to these feelings of rage?\n\nAlso, have you noticed any triggers that tend to set off these episodes? Is there something specific that happens or someone who interacts with you in a particular way that tends to make you feel angry? Understanding what might be triggering these emotions can help us work together to develop strategies to manage them.\n\nAdditionally, it might be helpful to explore some coping mechanisms or relaxation techniques that could provide relief when you start feeling overwhelmed. Deep breathing exercises, mindfulness practices, or engaging in activities that bring you joy can sometimes help calm down those intense feelings.\n\nLastly, let's consider seeking support from loved ones or considering therapy if you haven't already. Sometimes having an outside perspective and guidance can make a big difference in navigating through difficult times. What do you think about exploring these options further?",
+        "model_variant": "dpo"
+      },
+      {
+        "id": "identity_01",
+        "category": "identity",
+        "prompt": "I'm in my 30s and I still don't know who I am or what I want from life. Everyone around me seems to have it figured out. I feel like I'm just going through the motions.",
+        "response": "It can be really tough when it feels like everyone else has their lives together while you're still trying to find your way. It's completely normal to feel uncertain about who we are and what we want from life at this stage.\n\nFirstly, let's acknowledge that figuring out our identity and direction is a journey that takes time. It's not something that happens overnight. Many people go through periods of questioning and exploration before they land on a sense of purpose.\n\nCan you tell me more about what specifically makes you feel like you're just going through the motions? Is there anything in particular that's causing you distress or anxiety? Sometimes, pinpointing these feelings can help us better understand where to start.\n\nAlso, it might be helpful to remember that everyone's path is unique, and comparisons can sometimes make us feel worse rather than better. Instead of comparing yourself to others, try focusing on what brings you joy and fulfillment. What are some things that you've enjoyed doing in the past? Are there any new activities or hobbies that you'd like to explore?\n\nLastly, consider reaching out to trusted friends, family members, or even online communities where you can share your thoughts and feelings without fear of judgment. Sometimes, talking through our concerns with someone who understands can provide valuable insights and support.\n\nRemember, you're not alone in feeling this way, and it's okay to take your time finding your way.",
+        "model_variant": "dpo"
+      },
+      {
+        "id": "parenting_01",
+        "category": "parenting",
+        "prompt": "I yelled at my 5-year-old today and the look on her face broke my heart. I'm turning into my parents and that terrifies me. I don't want to repeat the cycle but I don't know how to be different.",
+        "response": "It can be incredibly challenging to witness our own behaviors being repeated in ourselves, especially when it comes to parenting. It takes a lot of courage to acknowledge this pattern and recognize your desire to break it.\n\nFirstly, please know that you're not alone in feeling this way. Many parents struggle with similar concerns about passing down unwanted patterns to their children. The fact that you're aware of it is already a significant step towards positive change.\n\nLet's start by exploring what might have led to yelling at your child. What was happening just before the incident? Was there something specific triggering you, such as stress, frustration, or perhaps feeling overwhelmed?\n\nUnderstanding these underlying factors will help us find strategies for managing them more effectively. This could include finding healthy coping mechanisms for stress, practicing mindfulness during difficult moments, or even learning ways to communicate assertively without losing control of your emotions.\n\nAdditionally, reflecting on your upbringing and how your parents' behavior impacted you might provide some insights. Understanding where certain behaviors originate from can give you power over breaking those cycles.\n\nIn terms of being different moving forward, consider small steps that you can take to improve your interactions with your child. For example, taking deep breaths before responding to a situation, setting aside quiet time each day for yourself, or seeking support from friends, family, or even online communities who share similar experiences.\n\nRemember, becoming a better parent is a journey filled with ups and downs. It’s okay to make mistakes along the way, but what matters most is that we learn from them and continue striving to do better. You've taken an important step by recognizing your concerns; now let's work together on building healthier habits and creating a more nurturing environment for both you and your child.",
+        "model_variant": "dpo"
+      },
+      {
+        "id": "burnout_01",
+        "category": "burnout",
+        "prompt": "I used to be passionate about my career in healthcare but after the last few years I feel completely burned out. I'm emotionally numb with my patients and I feel guilty about it.",
+        "response": "It sounds like you're going through a really tough time right now. It's completely understandable that you'd feel burnt out given the demands of your profession. Many people who work in healthcare experience similar challenges.\n\nCan you tell me more about what specifically has been contributing to this feeling of emotional numbness with your patients? Is there anything specific that's changed in your work environment or perhaps some particularly difficult cases that have taken a toll on you?\n\nAdditionally, guilt is a common companion to burnout. It can be helpful to explore where these feelings of guilt might be coming from. Are there any specific expectations you place upon yourself as a healthcare professional that you feel you're not meeting? Or perhaps there's something else at play here that we could discuss further?\n\nRemember, taking care of ourselves and recognizing our limits is an important part of being able to show up fully for others. Let's work together to find ways to address this burnout and help you regain your passion and engagement in your career.",
+        "model_variant": "dpo"
+      },
+      {
+        "id": "ocd_01",
+        "category": "ocd",
+        "prompt": "I have to check if the door is locked exactly seven times before I can leave the house. If I don't, I'm convinced something terrible will happen to my family. I know it's irrational but I can't stop.",
+        "response": "It sounds like you're experiencing some anxiety around leaving the house due to your need to check the door multiple times. It's understandable that you might be feeling this way, especially if you've had experiences in the past where something bad happened when you didn't follow certain routines or rituals.\n\nFirstly, let me acknowledge how difficult and distressing it must be for you to experience these intrusive thoughts and behaviors. It takes a lot of courage to share about such personal challenges.\n\nCan you tell me more about what specifically triggers this need to check the door? Is there anything specific that happened previously which has led to this behavior?\n\nIn the meantime, I'd suggest exploring some strategies together to help manage these anxieties. One approach could be gradually reducing the number of checks as we work on building trust in your ability to remember and ensure your family's safety without relying solely on this ritual. We can also discuss other coping mechanisms, such as deep breathing exercises, mindfulness, or grounding techniques, to help calm your mind during moments of heightened anxiety.\n\nHow do you feel about trying out some of these suggestions?",
+        "model_variant": "dpo"
+      }
+    ]
+  }
+}
