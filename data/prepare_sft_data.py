@@ -87,8 +87,8 @@ def process_mentalchat16k() -> list[dict]:
     ds = load_dataset("ShenLab/MentalChat16K", split="train")
     examples = []
     for row in ds:
-        user_msg = row["input"].strip()
-        assistant_msg = row["output"].strip()
+        user_msg = (row["input"] or "").strip()
+        assistant_msg = (row["output"] or "").strip()
         if not user_msg or not assistant_msg:
             continue
         examples.append(format_single_turn(user_msg, assistant_msg, "mentalchat16k"))
@@ -161,8 +161,8 @@ def process_psych8k() -> list[dict]:
                 examples.append(format_multi_turn(turns, "psych8k"))
 
         elif "input" in row and "output" in row:
-            user_msg = row["input"].strip()
-            assistant_msg = row["output"].strip()
+            user_msg = (row["input"] or "").strip()
+            assistant_msg = (row["output"] or "").strip()
             if user_msg and assistant_msg:
                 examples.append(format_single_turn(user_msg, assistant_msg, "psych8k"))
 

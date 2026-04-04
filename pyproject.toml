@@ -1,0 +1,60 @@
+[project]
+name = "counseLLM"
+version = "0.1.0"
+description = "Fine-tuned Llama 3.1 8B for mental health counseling using SFT + DPO alignment"
+readme = "README.md"
+license = { file = "LICENSE" }
+requires-python = ">=3.10"
+
+dependencies = [
+    # Core
+    "torch>=2.1.0",
+    "transformers>=4.40.0",
+    "trl>=0.8.0",
+    "peft>=0.10.0",
+    "bitsandbytes>=0.43.0",
+    "datasets>=2.19.0",
+    "accelerate>=0.30.0",
+
+    # Config
+    "pyyaml>=6.0",
+    "python-dotenv>=1.0.0",
+
+    # Evaluation
+    "evaluate",
+    "rouge-score",
+    "bert-score",
+
+    # Deployment
+    "chainlit>=1.0.0",
+
+    # Tokenizer
+    "sentencepiece",
+    "protobuf",
+]
+
+[project.optional-dependencies]
+notebooks = [
+    "matplotlib",
+    "seaborn",
+    "wordcloud",
+    "jupyter",
+]
+tracking = [
+    "wandb",
+]
+judge = [
+    "openai",
+    "anthropic",
+]
+infra = [
+    "modal",
+]
+dev = [
+    "counseLLM[notebooks,tracking,judge,infra]",
+]
+
+[tool.uv]
+dev-dependencies = [
+    "counseLLM[dev]",
+]

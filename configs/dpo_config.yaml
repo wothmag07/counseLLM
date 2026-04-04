@@ -15,8 +15,8 @@ quantization:
 
 # LoRA adapter (smaller rank than SFT — DPO is a refinement step)
 lora:
-  r: 32
-  lora_alpha: 64
+  r: 16
+  lora_alpha: 32
   lora_dropout: 0.05
   target_modules:
     - q_proj
@@ -31,15 +31,15 @@ lora:
 
 # DPO specific
 dpo:
-  beta: 0.1                         # KL penalty coefficient — lower = more aggressive alignment
+  beta: 0.5                         # KL penalty coefficient — higher = more conservative alignment
 
 # Training
 training:
-  num_train_epochs: 2
+  num_train_epochs: 1
   per_device_train_batch_size: 2
   per_device_eval_batch_size: 2
   gradient_accumulation_steps: 4    # effective batch size = 8
-  learning_rate: 5e-5
+  learning_rate: 1e-5
   lr_scheduler_type: "cosine"
   warmup_ratio: 0.1
   max_length: 2048

@@ -9,6 +9,7 @@ accelerate>=0.30.0
 
 # Config
 pyyaml>=6.0
+python-dotenv>=1.0.0
 
 # Evaluation
 evaluate
@@ -16,7 +17,7 @@ rouge-score
 bert-score
 
 # Deployment
-gradio>=4.0.0
+chainlit>=1.0.0
 
 # Tokenizer
 sentencepiece
