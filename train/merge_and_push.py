@@ -9,7 +9,7 @@ Usage:
     python train/merge_and_push.py
 
     # Merge and push
-    python train/merge_and_push.py --push --hub-repo your-username/conseLLM
+    python train/merge_and_push.py --push --hub-repo Wothmag07/counseLLM
 """
 
 import argparse
@@ -32,7 +32,7 @@ MERGED_DIR = Path(__file__).resolve().parent.parent / "outputs" / "merged"
 def main():
     parser = argparse.ArgumentParser(description="Merge counseLLM adapters and optionally push to Hub")
     parser.add_argument("--push", action="store_true", help="Push merged model to HuggingFace Hub")
-    parser.add_argument("--hub-repo", type=str, default="your-username/conseLLM",
+    parser.add_argument("--hub-repo", type=str, default="Wothmag07/counseLLM",
                         help="HuggingFace Hub repo ID")
     parser.add_argument("--sft-only", action="store_true",
                         help="Merge only SFT adapter (skip DPO)")

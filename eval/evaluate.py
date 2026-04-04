@@ -8,6 +8,8 @@ Metrics:
     - Response length statistics
     - Perplexity (on validation set)
     - Diversity metrics (distinct-1, distinct-2 n-grams)
+    - BERTScore (semantic similarity to reference responses)
+    - ROUGE-L (lexical overlap with reference responses)
 
 Usage:
     python eval/evaluate.py
@@ -24,12 +26,19 @@ from collections import Counter
 import torch
 from transformers import AutoModelForCausalLM, AutoTokenizer, BitsAndBytesConfig
 from peft import PeftModel
+from bert_score import score as bert_score
+from rouge_score import rouge_scorer
 
 # ---------------------------------------------------------------------------
 # Config
 # ---------------------------------------------------------------------------
 
 BASE_MODEL = "meta-llama/Llama-3.1-8B-Instruct"
+
+# Use cached model on volume if available (avoids re-downloading on Modal)
+_CACHED_MODEL = Path(__file__).resolve().parent.parent / "models" / "base"
+if _CACHED_MODEL.exists():
+    BASE_MODEL = str(_CACHED_MODEL)
 
 SYSTEM_PROMPT = (
     "You are a mental health counselor providing supportive, empathetic guidance. "
@@ -175,6 +184,27 @@ def compute_perplexity(model, tokenizer, texts: list[str], max_length: int = 204
     return math.exp(avg_loss)
 
 
+def compute_bert_score(prompts: list[str], responses: list[str]) -> dict:
+    """Compute BERTScore between prompts and responses (measures semantic relevance)."""
+    P, R, F1 = bert_score(responses, prompts, lang="en", verbose=False)
+    return {
+        "precision": P.mean().item(),
+        "recall": R.mean().item(),
+        "f1": F1.mean().item(),
+    }
+
+
+def compute_rouge_l(prompts: list[str], responses: list[str]) -> dict:
+    """Compute ROUGE-L between prompts and responses."""
+    scorer = rouge_scorer.RougeScorer(["rougeL"], use_stemmer=True)
+    scores = [scorer.score(p, r)["rougeL"] for p, r in zip(prompts, responses)]
+    return {
+        "precision": sum(s.precision for s in scores) / len(scores),
+        "recall": sum(s.recall for s in scores) / len(scores),
+        "f1": sum(s.fmeasure for s in scores) / len(scores),
+    }
+
+
 # ---------------------------------------------------------------------------
 # Main
 # ---------------------------------------------------------------------------
@@ -222,6 +252,7 @@ def main():
 
         # Compute metrics
         response_texts = [r["response"] for r in responses]
+        prompt_texts = [r["prompt"] for r in responses]
         metrics = {
             "length_stats": compute_length_stats(response_texts),
             "distinct_1": compute_distinct_ngrams(response_texts, 1),
@@ -231,6 +262,14 @@ def main():
         # Compute perplexity on generated responses
         print("  Computing perplexity...")
         metrics["perplexity"] = compute_perplexity(model, tokenizer, response_texts)
+
+        # Compute BERTScore (semantic relevance to prompt)
+        print("  Computing BERTScore...")
+        metrics["bert_score"] = compute_bert_score(prompt_texts, response_texts)
+
+        # Compute ROUGE-L (lexical overlap with prompt)
+        print("  Computing ROUGE-L...")
+        metrics["rouge_l"] = compute_rouge_l(prompt_texts, response_texts)
 
         all_results[variant] = {
             "metrics": metrics,
@@ -242,6 +281,8 @@ def main():
         print(f"    Distinct-1: {metrics['distinct_1']:.3f}")
         print(f"    Distinct-2: {metrics['distinct_2']:.3f}")
         print(f"    Perplexity: {metrics['perplexity']:.2f}")
+        print(f"    BERTScore F1: {metrics['bert_score']['f1']:.4f}")
+        print(f"    ROUGE-L F1: {metrics['rouge_l']['f1']:.4f}")
 
         # Free memory
         del model
@@ -270,6 +311,8 @@ def main():
         ("Distinct-1", lambda m: f"{m['distinct_1']:.3f}"),
         ("Distinct-2", lambda m: f"{m['distinct_2']:.3f}"),
         ("Perplexity", lambda m: f"{m['perplexity']:.2f}"),
+        ("BERTScore F1", lambda m: f"{m['bert_score']['f1']:.4f}"),
+        ("ROUGE-L F1", lambda m: f"{m['rouge_l']['f1']:.4f}"),
     ]
 
     for name, fmt_fn in metric_keys:
