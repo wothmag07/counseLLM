@@ -599,9 +599,11 @@ def train_full_pipeline():
 @modal.asgi_app()
 def web_app():
     """Deploy counseLLM as a web app on Modal."""
+    import subprocess
+    subprocess.run(["chainlit", "init"], check=False)
     from chainlit.utils import mount_chainlit
     from fastapi import FastAPI
 
     fastapi_app = FastAPI()
-    mount_chainlit(app=fastapi_app, target="/app/chat/app.py")
+    mount_chainlit(app=fastapi_app, target="/app/chat/app.py", path="")
     return fastapi_app

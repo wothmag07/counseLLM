@@ -1,0 +1,18 @@
+[project]
+name = "counseLLM"
+enable_telemetry = false
+
+[UI]
+name = "counseLLM"
+description = "A mental health counseling assistant powered by fine-tuned Llama 3.1"
+default_theme = "light"
+
+[UI.theme.light]
+primary = "#4A90D9"
+background = "#FAFBFC"
+paper = "#FFFFFF"
+
+[UI.theme.dark]
+primary = "#6DB3F2"
+background = "#1A1A2E"
+paper = "#242442"
