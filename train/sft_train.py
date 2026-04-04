@@ -16,10 +16,16 @@ Usage:
 """
 
 import argparse
+import os
 import torch
 from pathlib import Path
 
 import yaml
+try:
+    from dotenv import load_dotenv
+    load_dotenv()
+except ImportError:
+    pass  # not needed on Modal — env vars injected via secrets
 from datasets import load_dataset
 from transformers import (
     AutoModelForCausalLM,
@@ -128,10 +134,10 @@ def main():
         per_device_train_batch_size=t_cfg["per_device_train_batch_size"],
         per_device_eval_batch_size=t_cfg["per_device_eval_batch_size"],
         gradient_accumulation_steps=t_cfg["gradient_accumulation_steps"],
-        learning_rate=t_cfg["learning_rate"],
+        learning_rate=float(t_cfg["learning_rate"]),
         lr_scheduler_type=t_cfg["lr_scheduler_type"],
         warmup_ratio=t_cfg["warmup_ratio"],
-        max_seq_length=t_cfg["max_seq_length"],
+        max_length=t_cfg["max_length"],
         bf16=t_cfg["bf16"],
         gradient_checkpointing=t_cfg["gradient_checkpointing"],
         seed=t_cfg["seed"],

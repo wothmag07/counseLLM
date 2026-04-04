@@ -16,10 +16,14 @@ Usage:
 """
 
 import argparse
+import os
 import torch
 from pathlib import Path
 
 import yaml
+from dotenv import load_dotenv
+
+load_dotenv()
 from datasets import load_dataset
 from transformers import (
     AutoModelForCausalLM,
@@ -141,7 +145,7 @@ def main():
         per_device_train_batch_size=t_cfg["per_device_train_batch_size"],
         per_device_eval_batch_size=t_cfg["per_device_eval_batch_size"],
         gradient_accumulation_steps=t_cfg["gradient_accumulation_steps"],
-        learning_rate=t_cfg["learning_rate"],
+        learning_rate=float(t_cfg["learning_rate"]),
         lr_scheduler_type=t_cfg["lr_scheduler_type"],
         warmup_ratio=t_cfg["warmup_ratio"],
         max_length=t_cfg["max_length"],
