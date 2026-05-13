@@ -493,6 +493,152 @@ def merge_model(push_to_hub: bool = False, hub_repo: str = "Wothmag07/counseLLM"
 
 
 # ---------------------------------------------------------------------------
+# Push Adapters to HuggingFace Hub
+# ---------------------------------------------------------------------------
+
+
+SFT_ADAPTER_REPO = "Wothmag07/counseLLM-sft-lora"
+DPO_ADAPTER_REPO = "Wothmag07/counseLLM-dpo-lora"
+
+
+def _adapter_readme(stage: str, base_model: str, repo_id: str) -> str:
+    """Render a model-card README for a LoRA adapter repo."""
+    return f"""---
+library_name: peft
+base_model: {base_model}
+license: apache-2.0
+language:
+- en
+tags:
+- lora
+- peft
+- llama-3.1
+- mental-health
+- counseling
+- {stage.lower()}
+---
+
+# counseLLM — {stage} LoRA adapter
+
+LoRA adapter for `{base_model}` produced by the **{stage}** stage of the
+[counseLLM](https://github.com/wothmag07/counseLLM) training pipeline.
+
+For the ready-to-use merged checkpoint, see
+[Wothmag07/counseLLM](https://huggingface.co/Wothmag07/counseLLM).
+
+## Usage
+
+```python
+from transformers import AutoModelForCausalLM, AutoTokenizer
+from peft import PeftModel
+
+base = AutoModelForCausalLM.from_pretrained(
+    "{base_model}", torch_dtype="bfloat16", device_map="auto"
+)
+tokenizer = AutoTokenizer.from_pretrained("{base_model}")
+model = PeftModel.from_pretrained(base, "{repo_id}")
+```
+
+## Training
+
+- Method: QLoRA (4-bit NF4) on NVIDIA H100
+- Stage: {stage}
+- Pipeline and configs: see the [counseLLM repository](https://github.com/wothmag07/counseLLM)
+
+## Intended use
+
+Research and educational use only. **Not a substitute for professional mental
+health care.** If you are in crisis, contact the
+[988 Suicide & Crisis Lifeline](https://988lifeline.org/).
+"""
+
+
+@app.function(
+    image=training_image,
+    volumes={VOLUME_PATH: volume},
+    timeout=300,
+)
+def verify_adapters():
+    """List adapter folders on the volume and print adapter_config.json contents."""
+    import json
+    from pathlib import Path
+
+    project_dir = Path(PROJECT_ON_VOLUME)
+    for stage in ["sft", "dpo"]:
+        adapter_dir = project_dir / "outputs" / stage / "final"
+        print(f"\n=== {stage.upper()} adapter: {adapter_dir} ===")
+        if not adapter_dir.exists():
+            print("  MISSING - folder does not exist on volume")
+            continue
+        for f in sorted(adapter_dir.iterdir()):
+            size = f"{f.stat().st_size:,} bytes" if f.is_file() else "(dir)"
+            print(f"  {f.name}  {size}")
+        cfg = adapter_dir / "adapter_config.json"
+        if cfg.exists():
+            print("\n  adapter_config.json contents:")
+            print(json.dumps(json.loads(cfg.read_text()), indent=2))
+        else:
+            print("\n  WARNING: adapter_config.json missing")
+
+
+@app.function(
+    image=training_image,
+    volumes={VOLUME_PATH: volume},
+    secrets=[hf_secret],
+    timeout=1800,
+)
+def push_adapters(
+    sft_repo: str = SFT_ADAPTER_REPO,
+    dpo_repo: str = DPO_ADAPTER_REPO,
+    private: bool = False,
+):
+    """Upload SFT and DPO LoRA adapters from the volume to HuggingFace Hub."""
+    import os
+    from pathlib import Path
+    from huggingface_hub import HfApi, login
+
+    token = os.environ.get("HF_TOKEN")
+    if not token:
+        raise RuntimeError("HF_TOKEN not found in environment")
+    login(token=token)
+
+    api = HfApi()
+    base_model = "meta-llama/Llama-3.1-8B-Instruct"
+    project_dir = Path(PROJECT_ON_VOLUME)
+
+    targets = [
+        ("SFT", sft_repo, project_dir / "outputs" / "sft" / "final"),
+        ("DPO", dpo_repo, project_dir / "outputs" / "dpo" / "final"),
+    ]
+
+    for stage, repo_id, folder in targets:
+        if not folder.exists():
+            print(f"[{stage}] SKIPPING - {folder} not found on volume")
+            continue
+
+        readme_path = folder / "README.md"
+        readme_path.write_text(_adapter_readme(stage, base_model, repo_id))
+        print(f"[{stage}] Wrote model card to {readme_path}")
+
+        api.create_repo(
+            repo_id=repo_id, repo_type="model", private=private, exist_ok=True
+        )
+        print(f"[{stage}] Repo ready: https://huggingface.co/{repo_id}")
+
+        print(f"[{stage}] Uploading {folder} -> {repo_id} ...")
+        api.upload_folder(
+            folder_path=str(folder),
+            repo_id=repo_id,
+            repo_type="model",
+            commit_message=f"Upload counseLLM {stage} LoRA adapter",
+        )
+        print(f"[{stage}] Done: https://huggingface.co/{repo_id}")
+
+    volume.commit()
+    print("\nAll adapters pushed.")
+
+
+# ---------------------------------------------------------------------------
 # Evaluation
 # ---------------------------------------------------------------------------
 
